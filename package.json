@@ -1,0 +1,30 @@
+{
+  "name": "hero-matchtups-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sleighs/hero-matchtups-api.git"
+  },
+  "keywords": [],
+  "author": "Samuel Wright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sleighs/hero-matchtups-api/issues"
+  },
+  "homepage": "https://github.com/Sleighs/hero-matchtups-api#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "mongoose": "^6.6.6",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
