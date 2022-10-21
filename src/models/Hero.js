@@ -1,8 +1,12 @@
-const mongoose = require("mongoose")
+var mongoose = require("mongoose")
 
-const schema = mongoose.Schema({
-	name: String,
-	type: String,
-})
+mongoose.set('debug', true);
+
+const schema = new mongoose.Schema({
+	name: {type: String},
+	type: {type: String}
+}
+, { collection: 'heroes' }
+)
 
 module.exports = mongoose.model("Hero", schema)
