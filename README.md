@@ -12,7 +12,7 @@ The base url retrieves information about the API's available resources. All requ
 ### Requests 
 | Routes | Data |
 | ------------------- | --------------------------------- |
-| `/` | Gets information about the API's resources  |
+| `/` | Retrieves information about the API's resources  |
 | `/heroes`           | Retrieves information for all heroes. |
 | `/heroes/:heroName` | Retrieves information of the single specified `heroName` |
 | `/random`           | Gets a single random hero |
