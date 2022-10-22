@@ -54,4 +54,25 @@ router.get("/type/:type", async (req, res) => {
 	}
 })
 
+router.get("/random", async (req, res) => {
+	try { 
+		const heroes = await Hero.find()
+		var randomNum = Math.floor((Math.random() * heroes.length) + 1)
+		res.send(heroes[randomNum])
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error!" })
+	}
+})
+
+router.get("/random/:type", async (req, res) => {
+	try {
+		const heroesByType = await Hero.find({ type: req.params.type });
+		var randomNum = Math.floor((Math.random() * heroesByType.length) + 1)
+		res.send(heroesByType[randomNum])
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error!" })
+	}
+})
 module.exports = router
