@@ -12,16 +12,16 @@ const dotenv = require('dotenv')
 const app = express();
 
 // Helemt added for Rest API security
-app.use(helmet());
+//app.use(helmet());
 
-// Use bodyParser to parse JSON bodies into JS objects
+// Parse JSON into JS objects
 app.use(express.json());
 app.use(bodyParser.json());
 
 // Enable CORS for all requests
 app.use(cors());
 
-// Logs HTTP requests
+// Log HTTP requests
 app.use(morgan('combined'));
 
 // Add routes
