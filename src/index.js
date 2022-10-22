@@ -39,10 +39,12 @@ app.use("/api", router)
 
 // Connect to MongoDB database
 let uri =
-  `mongodb+srv://${username}:${password}@${cluster}/?authSource=${authSource}&authMechanism=${authMechanism}`;
+  //`mongodb://localhost:27017/${dbName}`
+  `mongodb+srv://${username}:${password}@${cluster}/${dbName}?authSource=${authSource}&authMechanism=${authMechanism}`;
 
-const client = new MongoClient(uri);
 /*
+const client = new MongoClient(uri);
+
 client.connect(err => {
   const collection = client.db(dbName).collection(heroesCollection);
   
@@ -63,8 +65,6 @@ async function run() {
 run().catch(console.dir);
 */
 
-let mongooseUri = `mongodb+srv://${username}:${password}@${cluster}/?retryWrites=true&w=majority`;
-
 const connectionParams = {
   useNewUrlParser: true,
   //useUnifiedTopology: true 
@@ -73,7 +73,7 @@ const connectionParams = {
 mongoose
 	.connect(uri, connectionParams)
 	.then(() => {
-    console.log("Server has started!")
+    console.log("Mongoose connected!")
 	})
 
 

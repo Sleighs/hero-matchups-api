@@ -2,11 +2,10 @@ var mongoose = require("mongoose")
 
 mongoose.set('debug', true);
 
-const schema = new mongoose.Schema({
+const schema = mongoose.Schema({
 	name: {type: String},
-	type: {type: String}
-}
-, { collection: 'heroes' }
-)
+	type: {type: String},
+	counters: { type: Object}
+}, { collection: 'heroes' })
 
 module.exports = mongoose.model("Hero", schema)
