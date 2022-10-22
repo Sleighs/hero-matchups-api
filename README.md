@@ -9,7 +9,7 @@ A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shoot
 ### `https://hero-matchups-api.herokuapp.com/`
 Returns all heroes.
 
-`[
+[
     {
         "_id": "6353d5156204d485dcb7f22a",
         "name": "D.Va",
@@ -35,19 +35,19 @@ Returns all heroes.
         "__v": 0
     },
     ...
-]`
+]
 
 ### `/heroes`
 Gets info for all heroes.
 
 ### `/heroes/:heroName`
-Gets info of specified heroName
+Gets info of specified `heroName`
 
 ### `/random`
 Gets a random hero
 
 ### `/random/:type`
-Gets a random hero the specified type
+Gets a random hero the specified `type`
 
 ### `/type/:type`
-Gets all heros of specified type. (types: tank, damage, support)
+Gets all heros of specified `type`. (types: tank, damage, support)
