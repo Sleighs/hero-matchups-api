@@ -30,17 +30,13 @@ app.use("/api", router)
 dotenv.config()
 
 // Connect to MongoDB database
-let uri =
-  //`mongodb://localhost:27017/${process.env.API_DB}`
-  `mongodb+srv://${process.env.ATLAS_USERNAME}:${process.env.ATLAS_PASSWORD}@${process.env.ATLAS_CLUSTER}/${process.env.API_DB}?authSource=${process.env.ATLAS_AUTH_SOURCE}&authMechanism=${process.env.ATLAS_AUTH_MECHANISM}`;
-
 const connectionParams = {
   useNewUrlParser: true,
-  //useUnifiedTopology: true 
+  useUnifiedTopology: true 
 };
 
 mongoose
-	.connect(uri, connectionParams)
+	.connect(process.env.API_URI, connectionParams)
 	.then(() => {
     console.log("Mongoose connected!")
 	})
