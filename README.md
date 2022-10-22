@@ -11,7 +11,7 @@ A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shoot
 The base url retrieves information about the API's available resources. 
 
 ### Requests 
-All requests are GET requests and go over https. All responses will return data in json.
+All requests are GET requests and go over https. All responses return json data.
 
 | Routes | Data |
 | ------------------- | --------------------------------- |
