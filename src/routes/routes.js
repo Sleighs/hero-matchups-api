@@ -6,6 +6,16 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 	return [ first.toUpperCase(), ...rest ].join('');
 }
 
+router.get("/", async (req, res) => {
+	try {
+		const heroes = await Hero.find();
+		res.send(heroes);
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error!" })
+	}
+})
+
 router.get("/heroes", async (req, res) => {
 	try {
 		const heroes = await Hero.find();
