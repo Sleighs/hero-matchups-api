@@ -8,8 +8,13 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 
 router.get("/", async (req, res) => {
 	try {
-		const heroes = await Hero.find();
-		res.send(heroes);
+		res.send({
+			allHeroes: 'https://hero-matchups-api.herokuapp.com/heroes',
+			singleHero: 'https://hero-matchups-api.herokuapp.com/heroes/:heroName',
+			heroesOfType: 'https://hero-matchups-api.herokuapp.com/type/:type',
+			randomHero: 'https://hero-matchups-api.herokuapp.com/random',
+			randomHeroByType: 'https://hero-matchups-api.herokuapp.com/random/:type'
+		});
 	} catch {
 		res.status(404)
 		res.send({ error: "Request error!" })
@@ -85,4 +90,5 @@ router.get("/random/:type", async (req, res) => {
 		res.send({ error: "Request error!" })
 	}
 })
+
 module.exports = router

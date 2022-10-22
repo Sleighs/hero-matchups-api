@@ -2,40 +2,11 @@
 
 A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shooter.
 
-`https://hero-matchups-api.herokuapp.com/`
 
-## Get Requests
+## Resources
 
-### `https://hero-matchups-api.herokuapp.com/`
-Returns all heroes.
-
-[
-    {
-        "_id": "6353d5156204d485dcb7f22a",
-        "name": "D.Va",
-        "type": "tank",
-        "counters": {
-            "Ana": "+",
-            "Ashe": "+",
-            "Bastion": "+",
-            "Brigitte": "-",
-            "Doomfist": "-",
-            "Hanzo": "++",
-            "Junkrat": "-",
-            "McCree": "+",
-            "Mei": "-",
-            "Mercy": "++",
-            "Moira": "+",
-            "Pharah": "+",
-            "Reaper": "+",
-            "Sombra": "-",
-            "Widowmaker": "++",
-            "Zarya": "--"
-        },
-        "__v": 0
-    },
-    ...
-]
+### `https://hero-matchups-api.herokuapp.com`
+The base url retrieves information about the API's available resources. All requests are GET requests and go over https. All responses will return data in json.
 
 ### `/heroes`
 Gets info for all heroes.
