@@ -4,25 +4,15 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const { MongoClient } = require("mongodb");
-const { connectInfo } = require('./connectInfo');
 const mongoose = require('mongoose');
 const router = require('./routes/routes');
-
-const username = encodeURIComponent(connectInfo.username);
-const password = encodeURIComponent(connectInfo.password);
-const cluster = connectInfo.cluster;
-const authSource = connectInfo.authSource;
-const authMechanism = connectInfo.authMechanism;
-const dbName = connectInfo.dbName;
-const heroesCollection = connectInfo.heroesCollection;
-
+const dotenv = require('dotenv')
 
 // define Express app
 const app = express();
 
 // adding Helmet to enhance your Rest API's security
-//app.use(helmet());
+app.use(helmet());
 
 // using bodyParser to parse JSON bodies into JS objects
 app.use(express.json());
@@ -37,33 +27,12 @@ app.use(morgan('combined'));
 // Add routes
 app.use("/api", router)
 
+dotenv.config()
+
 // Connect to MongoDB database
 let uri =
-  //`mongodb://localhost:27017/${dbName}`
-  `mongodb+srv://${username}:${password}@${cluster}/${dbName}?authSource=${authSource}&authMechanism=${authMechanism}`;
-
-/*
-const client = new MongoClient(uri);
-
-client.connect(err => {
-  const collection = client.db(dbName).collection(heroesCollection);
-  
-  client.close();
-});
-
-async function run() {
-    try {
-        await client.connect();
-        const database = client.db(dbName);
-        const heroes = database.collection(heroesCollection);
-        const cursor = heroes.find();
-        //await cursor.forEach(doc => console.dir(doc));
-    } finally {
-        await client.close();
-    }
-}
-run().catch(console.dir);
-*/
+  //`mongodb://localhost:27017/${process.env.API_DB}`
+  `mongodb+srv://${process.env.ATLAS_USERNAME}:${process.env.ATLAS_PASSWORD}@${process.env.ATLAS_CLUSTER}/${process.env.API_DB}?authSource=${process.env.ATLAS_AUTH_SOURCE}&authMechanism=${process.env.ATLAS_AUTH_MECHANISM}`;
 
 const connectionParams = {
   useNewUrlParser: true,
