@@ -1,4 +1,4 @@
-var dbData = [
+var heroData = [
     {
       name: "D.Va",
       type: "tank",
@@ -664,4 +664,4 @@ var dbData = [
     }
   ];
 
-exports.dbData = dbData;
+exports.heroData = heroData;
