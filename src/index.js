@@ -25,7 +25,7 @@ app.use(cors());
 app.use(morgan('combined'));
 
 // Add routes
-app.use("/api", router)
+app.use("/", router)
 
 // Enable .env
 dotenv.config()

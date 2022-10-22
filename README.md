@@ -2,19 +2,21 @@
 
 A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shooter.
 
+`https://hero-matchups-api.herokuapp.com/`
+
 ## Get Requests
 
-### /api/heroes
+### /heroes
 Gets info for all heroes.
 
-### /api/heroes/:heroName
+### /heroes/:heroName
 Gets info of specified heroName
 
-### /api/random
+### /random
 Gets a random hero
 
-### /api/random/:type
+### /random/:type
 Gets a random hero the specified type
 
-### /api/type/:type
+### /type/:type
 Gets all heros of specified type. (types: tank, damage, support)
