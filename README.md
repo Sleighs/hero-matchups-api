@@ -10,9 +10,10 @@ A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shoot
 The base url retrieves information about the API's available resources. All requests are GET requests and go over https. All responses will return data in json.
 
 ### Requests 
+| `/` | Gets information about the API's resources  |
 | ------------------- | --------------------------------- |
-| `/heroes`           | Gets info for all heroes. |
-| `/heroes/:heroName` | Gets info of specified `heroName` |
-| `/random`           | Gets a random hero |
-| `/random/:type`     | Gets a random hero the specified `type` |
-| `/type/:type`       | Gets all heros of specified `type`. (types: tank, damage, support) |
+| `/heroes`           | Retrieves information for all heroes. |
+| `/heroes/:heroName` | Retrieves information of the single specified `heroName` |
+| `/random`           | Gets a single random hero |
+| `/random/:type`     | Random hero of the specified `type` |
+| `/type/:type`       | Returns all heroes of specified `type`. (types: tank, damage, support) |
