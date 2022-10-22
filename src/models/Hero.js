@@ -1,6 +1,6 @@
 var mongoose = require("mongoose")
 
-mongoose.set('debug', true);
+//mongoose.set('debug', true);
 
 const schema = mongoose.Schema({
 	name: {type: String},
