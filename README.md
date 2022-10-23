@@ -1,7 +1,6 @@
 # Hero Matchups API
 
-A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shooter.
-
+A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shooter. Includes GET requests to retrieve a random hero and a random hero by hero type.
 
 ## Resources
 
