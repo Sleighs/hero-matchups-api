@@ -13,7 +13,7 @@ The base url retrieves information about the API's available resources.
 ### Requests 
 All requests are GET requests and go over https. All responses return json data.
 
-| Routes | Data |
+| Route | Data |
 | ------------------- | --------------------------------- |
 | `/` | Retrieves information about the API's resources  |
 | `/heroes`           | Retrieves information for all heroes. |
@@ -21,3 +21,10 @@ All requests are GET requests and go over https. All responses return json data.
 | `/random`           | Gets a single random hero |
 | `/random/:type`     | Gets random hero of the specified `type` |
 | `/type/:type`       | Returns all heroes of specified `type`. (types: tank, damage, support) |
+
+### Hero Schema 
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| name | String | Name of character |
+| type | String | Hero class (tank, damage, support) |
+| counters | Object | List of matchups | 
