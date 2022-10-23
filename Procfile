@@ -1,1 +1,1 @@
-web: npm start
+web: npm --optimize_for_size start
