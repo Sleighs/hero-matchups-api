@@ -12,7 +12,7 @@ const dotenv = require('dotenv')
 const app = express();
 
 // Helemt added for Rest API security
-app.use(helmet());
+//app.use(helmet());
 
 // Parse JSON into JS objects
 app.use(express.json());
@@ -37,7 +37,7 @@ const connectionParams = {
 };
 
 mongoose
-	.connect(process.env.API_URI, connectionParams)
+	.connect(process.env.API_ADMIN_URI, connectionParams)
 	.then(() => {
     console.log("Mongoose connected!")
 	})
