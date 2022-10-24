@@ -1,8 +1,6 @@
 # Hero Matchups API
 
-A hero counter resource for Overwatch 2, Blizzard's team based multiplayer shooter. Includes GET requests to retrieve a random hero or a random hero by hero type.
-
-## Resources
+A hero counter strategy resource for Overwatch 2, Blizzard's team based multiplayer shooter. Includes GET requests to retrieve a random hero or a random hero by hero type. Try demo out at https://hero-pick-app.web.app/ 
 
 ### Base Url
 `https://hero-matchups-api.herokuapp.com`
