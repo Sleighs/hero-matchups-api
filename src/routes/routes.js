@@ -51,6 +51,9 @@ router.get("/heroes/:name", async (req, res) => {
 		} else if (name === "Torbjorn"){
 			const heroByName = await Hero.find({ name: "Torbjörn" })
 			res.send(heroByName)
+		} else if (name === "McCree" || name === "Mccree"){
+			const heroByName = await Hero.find({ name: "Cassidy" })
+			res.send(heroByName)
 		} else {
 			const heroByName = await Hero.find({ name: name })
 			res.send(heroByName)

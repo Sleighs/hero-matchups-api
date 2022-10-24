@@ -1,18 +1,15 @@
-// import dependencies
+// Import dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const helmet = require('helmet');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const router = require('./routes/routes');
-const dotenv = require('dotenv')
+const adminRouter = require('./routes/adminRoutes');
+const dotenv = require('dotenv');
 
 // Define Express app
 const app = express();
-
-// Helemt added for Rest API security
-//app.use(helmet());
 
 // Parse JSON into JS objects
 app.use(express.json());

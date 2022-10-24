@@ -11,7 +11,7 @@ var heroData = [
       Doomfist: "-",
       Hanzo: "++",
       Junkrat: "-",
-      McCree: "+",
+      Cassidy: "+",
       Mei: "-",
       Mercy: "++",
       Moira: "+",
@@ -31,10 +31,8 @@ var heroData = [
       Ashe: "-",
       Dva: "+",
       Genji: "-",
-      McCree: "-",
       Orisa: "-",
       Pharah: "--",
-      Sigma: "+",
       Soldier76: "-",
       Sombra: "--"
     },
@@ -86,6 +84,7 @@ var heroData = [
       Orisa: "-",
       Pharah: "--",
       Reaper: "--",
+      Sigma: "+",
       Soldier76: "+",
       Sombra: "-",
       Widowmaker: "+"
@@ -102,7 +101,7 @@ var heroData = [
       Bastion: "+",
       Echo: "+",
       Lucio: "+",
-      McCree: "+",
+      Cassidy: "+",
       Mei: "--",
       Mercy: "+",
       Reaper: "--",
@@ -122,10 +121,11 @@ var heroData = [
     type: "tank",
     counters: {
       Ana: "+",
-      Doomfist: "-",
       Lucio: "-",
       Orisa: "-",
-      Roadhog: "+"
+      Reinhardt: "-",
+      Roadhog: "+",
+      Soldier76: "+"
     },
     difficulty: 3,
     skill: 3
@@ -138,7 +138,7 @@ var heroData = [
       Dva: "++",
       Genji: "++",
       Hanzo: "++",
-      McCree: "+",
+      Cassidy: "+",
       Reaper: "--",
       Roadhog: "--",
       Symmetra: "+",
@@ -235,7 +235,6 @@ var heroData = [
     type: "damage",
     counters: {
       Dva: "-",
-      Doomfist: "+",
       Echo: "+",
       Lucio: "++",
       Mei: "-",
@@ -258,7 +257,9 @@ var heroData = [
       Ana: "-",
       Bastion: "-",
       Baptiste: "-",
-      McCree: "-",
+      Junkrat: "++",
+      Cassidy: "-",
+      Reaper: "+",
       Roadhog: "-",
       Soldier76: "-",
       Sombra: "-",
@@ -316,6 +317,7 @@ var heroData = [
       Bastion: "+",
       Brigitte: "+",
       Dva: "+",
+      Echo: "--",
       Kiriko: "-",
       Orisa: "+",
       Pharah: "--",
@@ -338,7 +340,7 @@ var heroData = [
       Dva: "+",
       JunkerQueen: "-",
       Lucio: "-",
-      McCree: "+",
+      Cassidy: "+",
       Pharah: "-",
       Reinhardt: "++",
       Roadhog: "++",
@@ -361,7 +363,7 @@ var heroData = [
       Genji: "+",
       Junkrat: "++",
       Lucio: "++",
-      McCree: "--",
+      Cassidy: "--",
       Mei: "+",
       Reaper: "++",
       Reinhardt: "++",
@@ -381,6 +383,7 @@ var heroData = [
     counters: {
       Ana: "-",
       Dva: "-",
+      Echo: "-",
       Junkrat: "-",
       JunkerQueen: "+",
       Orisa: "+",
@@ -392,23 +395,6 @@ var heroData = [
       WreckingBall: "+",
       Zarya: "+",
       Zenyatta: "++"
-    },
-    difficulty: 1,
-    skill: 1
-  },
-  {
-    name: "Soldier: 76",
-    type: "damage",
-    counters: {
-      Baptiste: "+",
-      Bastion: "+",
-      Doomfist: "+",
-      Echo: "+",
-      Genji: "-",
-      Pharah: "++",
-      Reinhardt: "-",
-      Torbjorn: "+",
-      Winston: "-"
     },
     difficulty: 1,
     skill: 1
@@ -427,6 +413,24 @@ var heroData = [
     skill: 0
   },
   {
+    name: "Soldier: 76",
+    type: "damage",
+    counters: {
+      Baptiste: "+",
+      Bastion: "+",
+      Doomfist: "+",
+      Echo: "+",
+      Genji: "-",
+      Pharah: "++",
+      Reinhardt: "-",
+      Sigma: "-",
+      Torbjorn: "+",
+      Winston: "-"
+    },
+    difficulty: 1,
+    skill: 1
+  },
+  {
     name: "Sombra",
     type: "damage",
     counters: {
@@ -439,7 +443,7 @@ var heroData = [
       Junkrat: "-",
       Kiriko: "+",
       Lucio: "+",
-      McCree: "-",
+      Cassidy: "-",
       Reaper: "-",
       Reinhardt: "+",
       Roadhog: "-",
@@ -456,7 +460,7 @@ var heroData = [
     name: "Symmetra",
     type: "damage",
     counters: {
-      McCree: "-",
+      Cassidy: "-",
       Pharah: "--",
       Sombra: "-",
       Winston: "--",
@@ -494,7 +498,7 @@ var heroData = [
       Brigitte: "-",
       Hanzo: "++",
       Junkrat: "-",
-      McCree: "-",
+      Cassidy: "-",
       Pharah: "-",
       Sombra: "--",
       Torbjorn: "-",
@@ -516,12 +520,13 @@ var heroData = [
       Hanzo: "-",
       Junkrat: "++",
       Kiriko: "+",
-      McCree: "+",
+      Cassidy: "+",
       Mei: "+",
       Mercy: "+",
       Orisa: "+",
       Pharah: "+",
       Reinhardt: "-",
+      Sojourn: "-",
       Sombra: "-",
       Torbjorn: "+",
       Winston: "--",
@@ -609,7 +614,7 @@ var heroData = [
     counters: {
       Ashe: "-",
       Bastion: "-",
-      McCree: "--",
+      Cassidy: "--",
       Mei: "+",
       Roadhog: "-",
       Pharah: "--",
@@ -628,7 +633,7 @@ var heroData = [
       Ashe: "-",
       Dva: "--",
       Genji: "--",
-      McCree: "-",
+      Cassidy: "-",
       Roadhog: "-",
       Sojourn: "-",
       Widowmaker: "-"
