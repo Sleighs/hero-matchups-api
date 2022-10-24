@@ -68,7 +68,8 @@ var heroData = [
       Sigma: "-",
       Torbjorn: "+",
       Widowmaker: "-",
-      Zarya: "-"
+      Zarya: "-",
+      Zenyatta: "-"
     },
     difficulty: 2,
     skill: 2
@@ -393,8 +394,7 @@ var heroData = [
       Sombra: "+",
       Winston: "++",
       WreckingBall: "+",
-      Zarya: "+",
-      Zenyatta: "++"
+      Zarya: "+"
     },
     difficulty: 1,
     skill: 1
@@ -660,7 +660,7 @@ var heroData = [
       Ana: "-",
       Genji: "-",
       JunkerQueen: "-",
-      Reaper: "--",
+      Orisa: "+",
       Sombra: "-",
       Tracer: "--",
       Zarya: "+"

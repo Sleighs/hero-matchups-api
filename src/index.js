@@ -8,6 +8,9 @@ const router = require('./routes/routes');
 const adminRouter = require('./routes/adminRoutes');
 const dotenv = require('dotenv');
 
+// Enable .env
+dotenv.config()
+
 // Define Express app
 const app = express();
 
@@ -23,9 +26,6 @@ app.use(morgan('combined'));
 
 // Add routes
 app.use("/", router)
-
-// Enable .env
-dotenv.config()
 
 // Connect to MongoDB database
 const connectionParams = {
