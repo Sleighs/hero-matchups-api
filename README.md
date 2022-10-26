@@ -31,7 +31,6 @@ All requests are GET requests and go over https. All responses return json data.
 | archetype | Array | List of hero archetypes (Tank: Anchor, Initiator, First Responder, Damage Heavy; Damage: Anchor, Flanker, Sniper, Scrapper, Specialist; Suppport: Main Healer, Pocket Healer, Utility) |
 
 ## Future Releases
-* Character characteristics data
-* Class archetypes data
-* Best counter search
-* Counter by class search
+* Add character characteristics data 
+* Duo matchup information 
+* Best counter search feature 
