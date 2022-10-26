@@ -75,6 +75,48 @@ router.get("/type/:type", async (req, res) => {
 	}
 })
 
+router.get("/archetype/:archetypeName", async (req, res) => {
+	let archetypeName = capitalizeFirstLetter(req.params.archetypeName)
+
+	try { 
+		if (archetypeName === "First responder" || archetypeName === "Firstresponder"){
+			const heroesByArchetype = await Hero.find({ archetype: { $in: ["First Responder"] }});
+			res.send(heroesByArchetype)
+		} else if (archetypeName === "Damage heavy" || archetypeName === "Damageheavy"){
+			const heroesByArchetype = await Hero.find({ archetype: { $in: ["Damage Heavy"] }});
+			res.send(heroesByArchetype)
+		} else if (archetypeName === "Main healer" || archetypeName === "Mainhealer"){
+			const heroesByArchetype = await Hero.find({ archetype: { $in: ["Main Healer"] }});
+			res.send(heroesByArchetype)
+		} else if (archetypeName === "Pocket healer" || archetypeName === "Pockethealer"){
+			const heroesByArchetype = await Hero.find({ archetype: { $in: ["Pocket Healer"] }});
+			res.send(heroesByArchetype)
+		} else{
+			const heroesByArchetype = await Hero.find({ archetype: { $in: [archetypeName] }});
+			res.send(heroesByArchetype)
+		}
+		
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error!" })
+	}
+})
+
+/*router.get("/archetypeByHero/:hero", async (req, res) => {
+	let className = capitalizeFirstLetter(req.params.hero)
+
+	try { 
+		const heroesByArchetype = await Hero.find({ 
+			//archetype: { $elemMatch: { name: req.params.class }}
+			archetype: { $in: [className] }
+		});
+		res.send(heroesByArchetype)
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error!" })
+	}
+})*/
+
 router.get("/random", async (req, res) => {
 	try { 
 		const heroes = await Hero.find()

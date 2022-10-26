@@ -21,12 +21,12 @@ var heroData = [
       Widowmaker: "++",
       Zarya: "--"
     },
-    characteristics: {
+    /*characteristics: {
       durability: '',
       initiative: '',
       utility: '',
       damage: ''
-    },
+    },*/
     archetype: ["First Responder"],
     difficulty: 2,
     skill: 2
@@ -502,6 +502,7 @@ var heroData = [
   },
   {
     name: "Torbjorn",
+    //name: "Torbjörn",
     type: "damage",
     counters: {
       Ana: "-",

@@ -26,6 +26,7 @@ app.use(morgan('combined'));
 
 // Add routes
 app.use("/", router)
+//app.use("/admin", adminRouter)
 
 // Connect to MongoDB database
 const connectionParams = {

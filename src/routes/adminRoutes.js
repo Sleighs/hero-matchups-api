@@ -24,14 +24,6 @@ adminRouter.post("/initialUpload", async (req, res) => {
 
 adminRouter.put("/updateHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
-
-	// Get data
-	var heroArr = [];
-	for (var a = 0; a < heroData.length; a++){
-		if (heroData[a].name === name){
-			heroArr.push(heroData[a])
-		}
-	}
 	
 	if (name === "Dva" || name === "DVa" || name === "D.va"){
 		name = "D.Va"
@@ -41,14 +33,23 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 		name = "Wrecking Ball" 
 	} else if (name === "Soldier76" || name === "Soldier:76" || name === "Soldier 76"){
 		name = "Soldier: 76"
-	} else if (name === "Torbjorn"){
-		name = "Torbjörn" 
+	} else if (name === "Torbjorn" || name === "Torbjörn"){
+		//name = "Torbjörn"
+		name = "Torbjorn"
 	} else if (name === "McCree" || name === "Mccree"){
 		name = "Cassidy" 
 	}
 
+	// Get data
+	var heroArr = [];
+	for (var a = 0; a < heroData.length; a++){
+		if (heroData[a].name === name){
+			heroArr.push(heroData[a])
+		}
+	}
+
 	try {
-		
+		//console.log('obj', heroArr[0].archetype)
 		// Update document in database
 		Hero.findOneAndUpdate(
 			{name: name},
@@ -60,7 +61,8 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 				const response = {
 					message: "Item successfully updated",
 					name: name,
-					id: item._id
+					arch: item.archetype,
+					//id: item._id
 				};
 					
 				return res.status(200).send(response);
