@@ -9,15 +9,18 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 router.get("/", async (req, res) => {
 	try {
 		res.send({
+			base: 'https://hero-matchups-api.herokuapp.com/',
 			allHeroes: 'https://hero-matchups-api.herokuapp.com/heroes',
 			singleHero: 'https://hero-matchups-api.herokuapp.com/heroes/:heroName',
 			heroesOfType: 'https://hero-matchups-api.herokuapp.com/type/:type',
+			allArchetypes: 'https://hero-matchups-api.herokuapp.com/archetype',
+			archetypeByName: 'https://hero-matchups-api.herokuapp.com/archetype/:archetypeName',
 			randomHero: 'https://hero-matchups-api.herokuapp.com/random',
 			randomHeroByType: 'https://hero-matchups-api.herokuapp.com/random/:type'
 		});
 	} catch {
 		res.status(404)
-		res.send({ error: "Request error!" })
+		res.send({ error: "Request error retrieving route information!" })
 	}
 })
 
@@ -27,7 +30,7 @@ router.get("/heroes", async (req, res) => {
 		res.send(heroes);
 	} catch {
 		res.status(404)
-		res.send({ error: "Request error!" })
+		res.send({ error: "Request error retrieving heroes!" })
 	}
 })
 
@@ -60,7 +63,7 @@ router.get("/heroes/:name", async (req, res) => {
 		}
 	} catch {
 		res.status(404)
-		res.send({ error: "Request error!" })
+		res.send({ error: "Request error retrieving hero information!" })
 	}
 })
 
@@ -71,7 +74,20 @@ router.get("/type/:type", async (req, res) => {
 		res.send(heroesByType)
 	} catch {
 		res.status(404)
-		res.send({ error: "Request error!" })
+		res.send({ error: "Request error retrieving type list!" })
+	}
+})
+
+router.get("/archetype", async (req, res) => {
+	try {
+		res.send({
+			tank: ["Anchor", "Initiator", "First Responder", "Damage Heavy"],
+			damage: ["Anchor", "Flanker", "Sniper", "Scrapper", "Specialist"],
+			support: ["Main Healer", "Pocket Healer", "Utility"]
+		});
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error retrieving archetype list!" })
 	}
 })
 
@@ -98,7 +114,7 @@ router.get("/archetype/:archetypeName", async (req, res) => {
 		
 	} catch {
 		res.status(404)
-		res.send({ error: "Request error!" })
+		res.send({ error: "Request error retrieving archetype list!" })
 	}
 })
 
