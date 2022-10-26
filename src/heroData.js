@@ -21,6 +21,13 @@ var heroData = [
       Widowmaker: "++",
       Zarya: "--"
     },
+    characteristics: {
+      durability: '',
+      initiative: '',
+      utility: '',
+      damage: ''
+    },
+    archetype: ["First Responder"],
     difficulty: 2,
     skill: 2
   },
@@ -36,6 +43,7 @@ var heroData = [
       Soldier76: "-",
       Sombra: "--"
     },
+    archetype: ["Initiator"],
     difficulty: 3,
     skill: 3
   },
@@ -50,6 +58,7 @@ var heroData = [
       Orisa: "-",
       Zenyatta: "+"
     },
+    archetype: ["Damage Heavy"],
     difficulty: 0,
     skill: 0
   },
@@ -71,6 +80,7 @@ var heroData = [
       Zarya: "-",
       Zenyatta: "-"
     },
+    archetype: ["Anchor"],
     difficulty: 2,
     skill: 2
   },
@@ -90,6 +100,7 @@ var heroData = [
       Sombra: "-",
       Widowmaker: "+"
     },
+    archetype: ["Anchor"],
     difficulty: 1,
     skill: 1
   },
@@ -114,6 +125,7 @@ var heroData = [
       WreckingBall: "+",
       Zarya: "-"
     },
+    archetype: ["Damage Heavy"],
     difficulty: 1,
     skill: 1
   },
@@ -128,6 +140,7 @@ var heroData = [
       Roadhog: "+",
       Soldier76: "+"
     },
+    archetype: ["Anchor"],
     difficulty: 3,
     skill: 3
   },
@@ -146,6 +159,7 @@ var heroData = [
       Widowmaker: "++",
       Zenyatta: "++"
     },
+    archetype: ["Initiator"],
     difficulty: 2,
     skill: 2
   },
@@ -161,6 +175,7 @@ var heroData = [
       Sombra: "--",
       Widowmaker: "+"
     },
+    archetype: ["Initiator"],
     difficulty: 3,
     skill: 3
   },
@@ -180,6 +195,7 @@ var heroData = [
       Torbjorn: "++",
       Zenyatta: "-"
     },
+    archetype: ["First Responder"],
     difficulty: 3,
     skill: 3
   },
@@ -205,6 +221,7 @@ var heroData = [
       Winston: "-",
       WreckingBall: "-"
     },
+    archetype: ["Anchor", "Sniper"],
     difficulty: 2,
     skill: 2
   },
@@ -228,6 +245,7 @@ var heroData = [
       Winston: "++",
       Zarya: "+"
     },
+    archetype: ["Anchor", "Specialist"],
     difficulty: 1,
     skill: 1
   },
@@ -248,6 +266,7 @@ var heroData = [
       Widowmaker: "-",
       Winston: "-"
     },
+    archetype: ["Anchor"],
     difficulty: 2,
     skill: 2
   },
@@ -267,6 +286,7 @@ var heroData = [
       Torbjorn: "+",
       Widowmaker: "-"
     },
+    archetype: ["Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2
   },
@@ -289,6 +309,7 @@ var heroData = [
       Zarya: "--",
       Zenyatta: "+"
     },
+    archetype: ["Flanker", "Scrapper"],
     difficulty: 3,
     skill: 3
   },
@@ -307,6 +328,7 @@ var heroData = [
       Widowmaker: "-",
       Winston: "--"
     },
+    archetype: ["Anchor", "Sniper"],
     difficulty: 3,
     skill: 3
   },
@@ -330,6 +352,7 @@ var heroData = [
       Widowmaker: "--",
       Zarya: "-"
     },
+    archetype: ["Anchor", "Flanker", "Scrapepr"],
     difficulty: 2,
     skill: 2,
   },
@@ -349,6 +372,7 @@ var heroData = [
       WreckingBall: "+",
       Zarya: "-"
     },
+    archetype: ["Scrapper", "Specialist"],
     difficulty: 3,
     skill: 3
   },
@@ -375,6 +399,7 @@ var heroData = [
       Tracer: "+",
       Widowmaker: "-"
     },
+    archetype: ["Anchor", "Flanker", "Specialist"],
     difficulty: 1,
     skill: 1
   },
@@ -396,6 +421,7 @@ var heroData = [
       WreckingBall: "+",
       Zarya: "+"
     },
+    archetype: ["Flanker", "Scrapper"],
     difficulty: 1,
     skill: 1
   },
@@ -409,6 +435,7 @@ var heroData = [
       Winston: "-",
       Zarya: "-"
     },
+    archetype: ["Anchor", "Flanker", "Sniper"],
     difficulty: 0,
     skill: 0
   },
@@ -427,6 +454,7 @@ var heroData = [
       Torbjorn: "+",
       Winston: "-"
     },
+    archetype: ["Anchor"],
     difficulty: 1,
     skill: 1
   },
@@ -453,6 +481,7 @@ var heroData = [
       WreckingBall: "++",
       Zenyatta: "+"
     },
+    archetype: ["Flanker", "Specialist"],
     difficulty: 3,
     skill: 3
   },
@@ -467,6 +496,7 @@ var heroData = [
       Reinhardt: "+",
       Zarya: "-"
     },
+    archetype: ["Specialist"],
     difficulty: 2,
     skill: 2
   },
@@ -487,6 +517,7 @@ var heroData = [
       Widowmaker: "--",
       Zarya: "--"
     },
+    archetype: ["Anchor", "Scrapper", "Specialists"],
     difficulty: 2,
     skill: 2
   },
@@ -504,6 +535,7 @@ var heroData = [
       Torbjorn: "-",
       Zenyatta: "++"
     },
+    archetype: ["Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2
   },
@@ -532,6 +564,7 @@ var heroData = [
       Winston: "--",
       WreckingBall: "-"
     },
+    archetype: ["Sniper"],
     difficulty: 2,
     skill: 2
   },
@@ -559,6 +592,7 @@ var heroData = [
       WreckingBall: "+",
       Zenyatta: "+"
     },
+    archetype: ["Main Healer", "Utility"],
     difficulty: 3,
     skill: 3
   },
@@ -575,6 +609,7 @@ var heroData = [
       Sombra: "-",
       Soldier: "-"
     },
+    archetype: ["Main Healer", "Utility"],
     difficulty: 3,
     skill: 3
   },
@@ -593,6 +628,7 @@ var heroData = [
       Tracer: "+",
       WreckingBall: "++"
     },
+    archetype: ["Pocket Healer", "Utility"],
     difficulty: 1,
     skill: 1
   },
@@ -605,6 +641,7 @@ var heroData = [
       Sombra: "-",
       Widowmaker: "-"
     },
+    archetype: ["Utility"],
     difficulty: 0,
     skill: 0
   },
@@ -622,6 +659,7 @@ var heroData = [
       Sombra: "-",
       Torbjorn: "-"
     },
+    archetype: ["Utility"],
     difficulty: 2,
     skill: 2
   },
@@ -638,6 +676,7 @@ var heroData = [
       Sojourn: "-",
       Widowmaker: "-"
     },
+    archetype: ["Pocket Healer"],
     difficulty: 1,
     skill: 1,
   },
@@ -650,6 +689,7 @@ var heroData = [
       Orisa: "+",
       Reinhardt: "+"
     },
+    archetype: ["Main Healer"],
     difficulty: 2,
     skill: 2
   },
@@ -665,6 +705,7 @@ var heroData = [
       Tracer: "--",
       Zarya: "+"
     },
+    archetype: ["Pocket Healer", "Utility"],
     difficulty: 3,
     skill: 3
   }
