@@ -25,3 +25,9 @@ All requests are GET requests and go over https. All responses return json data.
 | name | String | Name of character |
 | type | String | Hero class (tank, damage, support) |
 | counters | Object | List of matchups | 
+
+## Future Releases
+* Character characteristics data
+* Class archetypes data
+* Best counter search
+* Counter by class search
