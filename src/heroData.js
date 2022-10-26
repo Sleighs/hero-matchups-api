@@ -352,7 +352,7 @@ var heroData = [
       Widowmaker: "--",
       Zarya: "-"
     },
-    archetype: ["Anchor", "Flanker", "Scrapepr"],
+    archetype: ["Anchor", "Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2,
   },
@@ -518,7 +518,7 @@ var heroData = [
       Widowmaker: "--",
       Zarya: "--"
     },
-    archetype: ["Anchor", "Scrapper", "Specialists"],
+    archetype: ["Anchor", "Scrapper", "Specialist"],
     difficulty: 2,
     skill: 2
   },
