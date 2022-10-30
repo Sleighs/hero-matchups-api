@@ -1,4 +1,6 @@
-// Includes pending updates
+// Curated hero data. Updates come here first.
+// Game: Overwatch 2, version 3.39, Oct 25 2022
+
 var heroData = [
   {
     name: "D.Va",
@@ -20,7 +22,7 @@ var heroData = [
       Sombra: "-",
       Widowmaker: "++",
       Zarya: "--"
-    },
+    }, 
     /*characteristics: {
       durability: '',
       initiative: '',
@@ -52,11 +54,11 @@ var heroData = [
     type: "tank",
     counters: {
       Ana: "+",
-      Bastion: "-",
+      Bastion: "--",
       Reaper: "-",
-      Mei: "-",
+      Mei: "--",
       Orisa: "-",
-      Zenyatta: "+"
+      Zenyatta: "-"
     },
     archetype: ["Damage Heavy"],
     difficulty: 0,
@@ -234,7 +236,7 @@ var heroData = [
       Echo: "+",
       Genji: "-",
       Hanzo: "--",
-      JunkerQueen: "+",
+      JunkerQueen: "++",
       Junkrat: "-",
       Lucio: "+",
       Reinhardt: "++",
@@ -362,7 +364,7 @@ var heroData = [
     counters: {
       Ashe: "-",
       Dva: "+",
-      JunkerQueen: "-",
+      JunkerQueen: "++",
       Lucio: "-",
       Cassidy: "+",
       Pharah: "-",
@@ -700,7 +702,7 @@ var heroData = [
     counters: {
       Ana: "-",
       Genji: "-",
-      JunkerQueen: "-",
+      JunkerQueen: "+",
       Orisa: "+",
       Sombra: "-",
       Tracer: "--",
