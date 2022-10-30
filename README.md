@@ -18,6 +18,9 @@ All requests are GET requests and go over https. All responses return json data.
 | `/random`           | Gets a single random hero |
 | `/random/:type`     | Gets random hero of the specified `type` |
 | `/type/:type`       | Returns all heroes of specified `type`. (types: tank, damage, support) |
+| `/archetype` | Lists all available hero archetypes |
+| `/archetype/:archetypeName` | Retrieves all heroes of the selected archetype |
+
 
 ### Hero Schema 
 | Key | Type | Description |
@@ -25,9 +28,9 @@ All requests are GET requests and go over https. All responses return json data.
 | name | String | Name of character |
 | type | String | Hero class (tank, damage, support) |
 | counters | Object | List of matchups | 
+| archetype | Array | List of hero archetypes (Tank: Anchor, Initiator, First Responder, Damage Heavy; Damage: Anchor, Flanker, Sniper, Scrapper, Specialist; Suppport: Main Healer, Pocket Healer, Utility) |
 
 ## Future Releases
-* Character characteristics data
-* Class archetypes data
-* Best counter search
-* Counter by class search
+* Add character characteristics data 
+* Duo matchup information 
+* Best counter search feature 
