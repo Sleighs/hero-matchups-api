@@ -192,6 +192,7 @@ var heroData = [
       Mei: "+",
       Pharah: "--",
       Sojourn: "+",
+      Sombra: "-",
       Reaper: "-",
       Roadhog: "+",
       Torbjorn: "++",
@@ -399,7 +400,8 @@ var heroData = [
       Symmetra: "++",
       Torbjorn: "+",
       Tracer: "+",
-      Widowmaker: "-"
+      Widowmaker: "--",
+      Zarya: "++"
     },
     archetype: ["Anchor", "Flanker", "Specialist"],
     difficulty: 1,
@@ -481,6 +483,7 @@ var heroData = [
       Tracer: "++",
       Widowmaker: "+",
       WreckingBall: "++",
+      Zarya: "+",
       Zenyatta: "+"
     },
     archetype: ["Flanker", "Specialist"],
@@ -559,7 +562,7 @@ var heroData = [
       Mei: "+",
       Mercy: "+",
       Orisa: "+",
-      Pharah: "+",
+      Pharah: "++",
       Reinhardt: "-",
       Sojourn: "-",
       Sombra: "-",
