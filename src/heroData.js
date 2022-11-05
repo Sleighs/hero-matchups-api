@@ -140,7 +140,8 @@ var heroData = [
       Orisa: "-",
       Reinhardt: "-",
       Roadhog: "+",
-      Soldier76: "+"
+      Soldier76: "+",
+      Widowmaker: "+"
     },
     archetype: ["Anchor"],
     difficulty: 3,
@@ -564,6 +565,7 @@ var heroData = [
       Orisa: "+",
       Pharah: "++",
       Reinhardt: "-",
+      Sigma: "-",
       Sojourn: "-",
       Sombra: "-",
       Torbjorn: "+",

@@ -26,7 +26,7 @@ app.use(morgan('combined'));
 
 // Add routes
 app.use("/", router)
-app.use("/admin", adminRouter)
+//app.use("/admin", adminRouter)
 
 // Connect to MongoDB database
 const connectionParams = {
@@ -35,7 +35,7 @@ const connectionParams = {
 };
 
 mongoose
-	.connect(process.env.API_ADMIN_URI, connectionParams)
+	.connect(process.env.API_URI, connectionParams)
 	.then(() => {
     console.log("Mongoose ready!")
 	})
