@@ -120,21 +120,6 @@ router.get("/archetype/:archetypeName", async (req, res) => {
 	}
 })
 
-/*router.get("/archetypeByHero/:hero", async (req, res) => {
-	let className = capitalizeFirstLetter(req.params.hero)
-
-	try { 
-		const heroesByArchetype = await Hero.find({ 
-			//archetype: { $elemMatch: { name: req.params.class }}
-			archetype: { $in: [className] }
-		});
-		res.send(heroesByArchetype)
-	} catch {
-		res.status(404)
-		res.send({ error: "Request error!" })
-	}
-})*/
-
 router.get("/random", async (req, res) => {
 	try { 
 		const heroes = await Hero.find()
