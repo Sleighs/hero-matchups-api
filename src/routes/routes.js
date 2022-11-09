@@ -16,7 +16,8 @@ router.get("/", async (req, res) => {
 			allArchetypes: 'https://hero-matchups-api.herokuapp.com/archetype',
 			archetypeByName: 'https://hero-matchups-api.herokuapp.com/archetype/:archetypeName',
 			randomHero: 'https://hero-matchups-api.herokuapp.com/random',
-			randomHeroByType: 'https://hero-matchups-api.herokuapp.com/random/:type'
+			randomHeroByType: 'https://hero-matchups-api.herokuapp.com/random/:type',
+			lastUpdated: 'November 9, 2022',
 		});
 	} catch {
 		res.status(404)

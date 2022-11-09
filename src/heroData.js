@@ -31,7 +31,11 @@ var heroData = [
     },*/
     archetype: ["First Responder"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 350,
+    health2: 150,
+    armor: 300,
+    shields: 0,
   },
   {
     name: "Doomfist",
@@ -47,7 +51,10 @@ var heroData = [
     },
     archetype: ["Initiator"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 450,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Junker Queen",
@@ -62,7 +69,10 @@ var heroData = [
     },
     archetype: ["Damage Heavy"],
     difficulty: 0,
-    skill: 0
+    skill: 0,
+    health: 425,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Orisa",
@@ -84,8 +94,20 @@ var heroData = [
     },
     archetype: ["Anchor"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 275,
+    armor: 275,
+    shields: 0,
   },
+  /*
+  {
+    name: 'Ramattra',
+    type: 'tank',
+    counters: {},
+    health: 450,
+    health2: 600,
+  },
+  */
   {
     name: "Reinhardt",
     type: "tank",
@@ -104,7 +126,10 @@ var heroData = [
     },
     archetype: ["Anchor"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 325,
+    armor: 300,
+    shields: 0,
   },
   {
     name: "Roadhog",
@@ -129,7 +154,10 @@ var heroData = [
     },
     archetype: ["Damage Heavy"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 700,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Sigma",
@@ -145,7 +173,10 @@ var heroData = [
     },
     archetype: ["Anchor"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 350,
+    armor: 0,
+    shields: 200,
   },
   {
     name: "Winston",
@@ -164,7 +195,10 @@ var heroData = [
     },
     archetype: ["Initiator"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 350,
+    armor: 200,
+    shields: 0,
   },
   {
     name: "Wrecking Ball",
@@ -180,7 +214,10 @@ var heroData = [
     },
     archetype: ["Initiator"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 550,
+    armor: 150,
+    shields: 0,
   },
   {
     name: "Zarya",
@@ -201,7 +238,10 @@ var heroData = [
     },
     archetype: ["First Responder"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 250,
+    armor: 0,
+    shields: 225,
   },
   {
     name: "Ashe",
@@ -227,7 +267,10 @@ var heroData = [
     },
     archetype: ["Anchor", "Sniper"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Bastion",
@@ -251,7 +294,10 @@ var heroData = [
     },
     archetype: ["Anchor", "Specialist"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 200,
+    armor: 100,
+    shields: 0,
   },
   {
     name: "Cassidy",
@@ -272,7 +318,10 @@ var heroData = [
     },
     archetype: ["Anchor"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 225,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Echo",
@@ -292,7 +341,10 @@ var heroData = [
     },
     archetype: ["Flanker", "Scrapper"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Genji",
@@ -315,7 +367,10 @@ var heroData = [
     },
     archetype: ["Flanker", "Scrapper"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Hanzo",
@@ -334,7 +389,10 @@ var heroData = [
     },
     archetype: ["Anchor", "Sniper"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Junkrat",
@@ -359,6 +417,9 @@ var heroData = [
     archetype: ["Anchor", "Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Mei",
@@ -378,7 +439,10 @@ var heroData = [
     },
     archetype: ["Scrapper", "Specialist"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 250,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Pharah",
@@ -406,7 +470,10 @@ var heroData = [
     },
     archetype: ["Anchor", "Flanker", "Specialist"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Reaper",
@@ -428,7 +495,10 @@ var heroData = [
     },
     archetype: ["Flanker", "Scrapper"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 250,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Sojourn",
@@ -442,7 +512,10 @@ var heroData = [
     },
     archetype: ["Anchor", "Flanker", "Sniper"],
     difficulty: 0,
-    skill: 0
+    skill: 0,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Soldier: 76",
@@ -461,7 +534,10 @@ var heroData = [
     },
     archetype: ["Anchor"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Sombra",
@@ -489,7 +565,10 @@ var heroData = [
     },
     archetype: ["Flanker", "Specialist"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Symmetra",
@@ -504,7 +583,10 @@ var heroData = [
     },
     archetype: ["Specialist"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 100,
+    armor: 0,
+    shields: 125,
   },
   {
     name: "Torbjorn",
@@ -526,7 +608,10 @@ var heroData = [
     },
     archetype: ["Anchor", "Scrapper", "Specialist"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 200,
+    armor: 50,
+    shields: 0,
   },
   {
     name: "Tracer",
@@ -544,7 +629,10 @@ var heroData = [
     },
     archetype: ["Flanker", "Scrapper"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 150,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Widowmaker",
@@ -574,7 +662,10 @@ var heroData = [
     },
     archetype: ["Sniper"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Ana",
@@ -602,7 +693,10 @@ var heroData = [
     },
     archetype: ["Main Healer", "Utility"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Baptiste",
@@ -619,7 +713,10 @@ var heroData = [
     },
     archetype: ["Main Healer", "Utility"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Brigitte",
@@ -638,7 +735,10 @@ var heroData = [
     },
     archetype: ["Pocket Healer", "Utility"],
     difficulty: 1,
-    skill: 1
+    skill: 1,
+    health: 150,
+    armor: 50,
+    shields: 0,
   },
   {
     name: "Kiriko",
@@ -651,7 +751,10 @@ var heroData = [
     },
     archetype: ["Utility"],
     difficulty: 0,
-    skill: 0
+    skill: 0,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Lucio",
@@ -669,7 +772,10 @@ var heroData = [
     },
     archetype: ["Utility"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Mercy",
@@ -687,6 +793,9 @@ var heroData = [
     archetype: ["Pocket Healer"],
     difficulty: 1,
     skill: 1,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Moira",
@@ -699,7 +808,10 @@ var heroData = [
     },
     archetype: ["Main Healer"],
     difficulty: 2,
-    skill: 2
+    skill: 2,
+    health: 200,
+    armor: 0,
+    shields: 0,
   },
   {
     name: "Zenyatta",
@@ -715,7 +827,10 @@ var heroData = [
     },
     archetype: ["Pocket Healer", "Utility"],
     difficulty: 3,
-    skill: 3
+    skill: 3,
+    health: 50,
+    armor: 0,
+    shields: 150,
   }
 ];
 
