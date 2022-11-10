@@ -112,6 +112,7 @@ var heroData = [
     name: "Reinhardt",
     type: "tank",
     counters: {
+      Ashe: "+",
       Bastion: "--",
       Brigitte: "-",
       Junkrat: "--",
@@ -259,6 +260,7 @@ var heroData = [
       Orisa: "-",
       Pharah: "++",
       Reaper: "+",
+      Reinhardt: "-",
       Soldier76: "+",
       Symmetra: "+",
       Widowmaker: "-",
@@ -578,7 +580,6 @@ var heroData = [
       Pharah: "--",
       Sombra: "-",
       Winston: "--",
-      Reinhardt: "+",
       Zarya: "-"
     },
     archetype: ["Specialist"],
