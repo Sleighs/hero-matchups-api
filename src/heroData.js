@@ -208,6 +208,7 @@ var heroData = [
       Ana: "-",
       Brigitte: "--",
       Mei: "-",
+      Moira: "+",
       Reaper: "-",
       Roadhog: "-",
       Sombra: "--",
@@ -803,7 +804,8 @@ var heroData = [
       Ana: "-",
       Dva: "-",
       Orisa: "+",
-      Reinhardt: "+"
+      Reinhardt: "+",
+      WreckingBall: "-"
     },
     archetype: ["Main Healer"],
     difficulty: 2,
