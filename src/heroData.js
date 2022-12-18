@@ -103,6 +103,7 @@ var heroData = [
     type: "tank",
     counters: {
       Winston: "+",
+      Roadhog: "-",
 
     },
     archetype: ["Anchor"],
