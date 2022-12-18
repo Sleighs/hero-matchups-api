@@ -99,15 +99,19 @@ var heroData = [
     armor: 275,
     shields: 0,
   },
-  /*
   {
-    name: 'Ramattra',
-    type: 'tank',
-    counters: {},
+    type: "tank",
+    counters: {
+      Winston: "+",
+
+    },
+    archetype: ["Anchor"],
+    difficulty: 3,
+    skill: 3,
     health: 450,
-    health2: 600,
+    armor: 0,
+    shields: 0,
   },
-  */
   {
     name: "Reinhardt",
     type: "tank",

@@ -8,35 +8,6 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 }
 
 // Routes for updating documents
-adminRouter.post("/initialUpload", async (req, res) => {
-	console.log('init')
-    // Post all documents to database
-	try {
-		 heroData.forEach((info,i) => {
-			//const newHero = new Hero(item);
-			//newHero.save();	
-
-			Hero.findOneAndUpdate(
-				{name: info.name},
-				info,
-				{new: true},
-				(err, item) => {
-					if (err) return res.status(500).send(err);
-				
-					const response = {
-						message: "Item successfully updated",
-						name: info.name,
-					};
-						
-					return res.status(200).send(response);
-				});
-		})
-	} catch {
-		res.status(404)
-		res.send({ error: "Request error!" })
-	}
-})
-
 adminRouter.put("/updateHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
 	
