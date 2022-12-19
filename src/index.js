@@ -24,11 +24,7 @@ app.use(cors());
 // Log HTTP requests
 app.use(morgan('combined'));
 
-// Add routes
-app.use("/", router)
-//app.use("/admin", adminRouter)
-
-// Add headers before the routes are defined
+// Add headers
 app.use(function (req, res, next) {
   // Websites
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -45,6 +41,10 @@ app.use(function (req, res, next) {
   // Pass to next layer of middleware
   next();
 });
+
+// Add routes
+app.use("/", router)
+//app.use("/admin", adminRouter)
 
 // Connect to MongoDB database
 const connectionParams = {
