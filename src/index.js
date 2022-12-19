@@ -1,12 +1,13 @@
 // Import dependencies
 const express = require('express');
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+
 const router = require('./routes/routes');
 const adminRouter = require('./routes/adminRoutes');
-const dotenv = require('dotenv');
 
 // Enable .env
 dotenv.config()
@@ -18,29 +19,22 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 
-// Enable CORS for all requests
-app.use(cors());
-
-// Log HTTP requests
-app.use(morgan('combined'));
-
 // Add headers
 app.use(function (req, res, next) {
-  // Websites
   res.setHeader('Access-Control-Allow-Origin', '*');
-
-  // Request methods
-  //res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  
-  // Request headers
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
   res.setHeader('Access-Control-Allow-Credentials', true);
 
   // Pass to next layer of middleware
   next();
 });
+
+// Enable CORS for all requests
+app.use(cors());
+
+// Log HTTP requests
+app.use(morgan('combined'));
 
 // Add routes
 app.use("/", router)
