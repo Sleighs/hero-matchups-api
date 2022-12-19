@@ -100,11 +100,11 @@ var heroData = [
     shields: 0,
   },
   {
+    name: "Ramattra",
     type: "tank",
     counters: {
       Winston: "+",
       Roadhog: "-",
-
     },
     archetype: ["Anchor"],
     difficulty: 3,

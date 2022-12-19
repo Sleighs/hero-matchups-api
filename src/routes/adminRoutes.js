@@ -92,6 +92,24 @@ adminRouter.put("/updateHeroes/", async (req, res) => {
 	}
 })
 
+adminRouter.post("/addHero/:heroName", async (req, res) => {
+	let name = capitalizeFirstLetter(req.params.heroName)
+	
+	var heroArr = [];
+	for (var a = 0; a < heroData.length; a++){
+		if (heroData[a].name === name){
+			heroArr.push(heroData[a])
+		}
+	}
+
+	try {
+		await Hero.create(heroArr[0])
+	} catch {
+		res.status(404)
+		res.send({ error: "Post request error!" })
+	}
+})
+
 adminRouter.delete("/delete/:heroName", async (req, res) => {
 	try {
 		Hero.remove({name: req.params.heroName}, function(err){
