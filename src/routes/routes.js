@@ -2,6 +2,10 @@ const express = require("express")
 const Hero = require("../models/Hero")
 const router = express.Router()
 
+//const apiUrl = 'https://hero-matchups-api.herokuapp.com'
+const apiUrl = 'https://hero-matchups-api.netlify.app/.netlify/functions/api'
+
+
 function capitalizeFirstLetter([ first='', ...rest ]) {
 	return [ first.toUpperCase(), ...rest ].join('');
 }
@@ -9,15 +13,15 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 router.get("/", async (req, res) => {
 	try {
 		res.send({
-			base: 'https://hero-matchups-api.herokuapp.com/',
-			allHeroes: 'https://hero-matchups-api.herokuapp.com/heroes',
-			singleHero: 'https://hero-matchups-api.herokuapp.com/heroes/:heroName',
-			heroesOfType: 'https://hero-matchups-api.herokuapp.com/type/:type',
-			allArchetypes: 'https://hero-matchups-api.herokuapp.com/archetype',
-			archetypeByName: 'https://hero-matchups-api.herokuapp.com/archetype/:archetypeName',
-			randomHero: 'https://hero-matchups-api.herokuapp.com/random',
-			randomHeroByType: 'https://hero-matchups-api.herokuapp.com/random/:type',
-			lastUpdated: 'November 9, 2022',
+			base: apiUrl,
+			allHeroes: apiUrl + '/heroes',
+			singleHero: apiUrl + '/heroes/:heroName',
+			heroesOfType: apiUrl + '/type/:type',
+			allArchetypes: apiUrl + '/archetype',
+			archetypeByName: apiUrl + '/archetype/:archetypeName',
+			randomHero: apiUrl + '/random',
+			randomHeroByType: apiUrl + '/random/:type',
+			lastUpdated: 'December 18, 2022',
 		});
 	} catch {
 		res.status(404)
