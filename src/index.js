@@ -28,6 +28,24 @@ app.use(morgan('combined'));
 app.use("/", router)
 //app.use("/admin", adminRouter)
 
+// Add headers before the routes are defined
+app.use(function (req, res, next) {
+  // Websites
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // Request methods
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  
+  // Request headers
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  // Pass to next layer of middleware
+  next();
+});
+
 // Connect to MongoDB database
 const connectionParams = {
   useNewUrlParser: true,
