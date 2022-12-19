@@ -2,7 +2,8 @@ ow2Data.js
 
 .env
 
-src/ow2Data.js
+docs
 
-docs/connectInfo.js
-docs/notes.md
+node_modules
+
+functions
