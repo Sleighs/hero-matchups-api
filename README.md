@@ -3,7 +3,7 @@
 A hero counter strategy resource for Overwatch 2, Blizzard's team based multiplayer shooter. Includes GET requests to retrieve a random hero or a random hero by hero type. Try demo out at https://hero-pick-app.web.app/ 
 
 ### Base Url
-`https://hero-matchups-api.herokuapp.com`
+`https://hero-matchups-api.netlify.app/.netlify/functions/api`
 
 The base url retrieves information about the API's available resources. 
 
@@ -34,3 +34,4 @@ All requests are GET requests and go over https. All responses return json data.
 * Add character characteristics data 
 * Duo matchup information 
 * Best counter search feature 
+* Lineup analyzer
