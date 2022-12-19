@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
 });
 
 // Enable CORS for all requests
-//app.use(cors());
+app.use(cors());
 
 // Log HTTP requests
 app.use(morgan('combined'));
