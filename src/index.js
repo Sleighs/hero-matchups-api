@@ -20,17 +20,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Enable CORS for all requests
-app.use(cors({
-  credentials: true,
-  origin: '*'
-}));
+app.use(cors());
 
 // Log HTTP requests
-app.use(morgan('combined'));
+app.use(morgan('dev'));
 
 // Add routes
 app.use("/", router)
-//app.use("/admin", adminRouter)
+app.use("/admin", adminRouter)
 
 // Connect to MongoDB database
 const connectionParams = {
