@@ -85,6 +85,7 @@ var heroData = [
       JunkerQueen: "+",
       Junkrat: "-",
       Moira: "-",
+      Ramattra: "+",
       Reaper: "-",
       Sigma: "-",
       Torbjorn: "+",
@@ -156,6 +157,7 @@ var heroData = [
       Cassidy: "+",
       Mei: "--",
       Mercy: "+",
+      Ramattra: "+",
       Reaper: "--",
       Sigma: "-",
       Soldier76: "+",
@@ -272,6 +274,7 @@ var heroData = [
       Mercy: "+",
       Orisa: "-",
       Pharah: "++",
+      Ramattra: "+",
       Reaper: "+",
       Reinhardt: "-",
       Soldier76: "+",
@@ -756,6 +759,7 @@ var heroData = [
     counters: {
       Ana: "+",
       Junkrat: "+",
+      Ramattra: "+",
       Sombra: "-",
       Tracer: "-",
       Widowmaker: "-"
@@ -833,6 +837,7 @@ var heroData = [
       Genji: "-",
       JunkerQueen: "+",
       Orisa: "+",
+      Ramattra: "+",
       Sombra: "-",
       Tracer: "--",
       Zarya: "+"

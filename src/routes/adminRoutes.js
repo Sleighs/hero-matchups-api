@@ -35,7 +35,6 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 	}
 
 	try {
-		//console.log('obj', heroArr[0].archetype)
 		// Update document in database
 		Hero.findOneAndUpdate(
 			{name: name},
@@ -47,7 +46,6 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 				const response = {
 					message: "Item successfully updated",
 					name: name,
-					//arch: item.archetype,
 					//id: item._id
 				};
 					
@@ -59,6 +57,7 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 	}
 })
 
+/*
 adminRouter.put("/updateHeroes/", async (req, res) => {
 	try {
 		await heroData.forEach(item => {
@@ -92,6 +91,7 @@ adminRouter.put("/updateHeroes/", async (req, res) => {
 	}
 })
 
+
 adminRouter.post("/addHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
 	
@@ -110,6 +110,7 @@ adminRouter.post("/addHero/:heroName", async (req, res) => {
 	}
 })
 
+
 adminRouter.delete("/delete/:heroName", async (req, res) => {
 	try {
 		Hero.remove({name: req.params.heroName}, function(err){
@@ -125,6 +126,6 @@ adminRouter.delete("/delete/:heroName", async (req, res) => {
 		res.send({ error: "Request error!" })
 	}
 })
-
+*/
 
 module.exports = adminRouter
