@@ -90,7 +90,7 @@ adminRouter.put("/updateHeroes/", async (req, res) => {
 		res.send({ error: "Put request error!" })
 	}
 })
-
+*/
 
 adminRouter.post("/addHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
@@ -104,10 +104,11 @@ adminRouter.post("/addHero/:heroName", async (req, res) => {
 
 	try {
 		await Hero.create(heroArr[0])
+		res.status(200).send({ message: "Hero added!" })
 	} catch {
-		res.status(404)
-		res.send({ error: "Post request error!" })
+		res.status(404).send({ error: "Post request error!" })
 	}
+	return
 })
 
 
@@ -116,7 +117,7 @@ adminRouter.delete("/delete/:heroName", async (req, res) => {
 		Hero.remove({name: req.params.heroName}, function(err){
 			if (err) {
 				res.send(err);
-			} else{
+			} else {
 				// change respond, add status to avoid error
 				res.send("deleted", req.params.heroName);
 			}
@@ -126,6 +127,7 @@ adminRouter.delete("/delete/:heroName", async (req, res) => {
 		res.send({ error: "Request error!" })
 	}
 })
-*/
+
+
 
 module.exports = adminRouter
