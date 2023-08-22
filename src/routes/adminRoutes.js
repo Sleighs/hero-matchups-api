@@ -57,11 +57,11 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 	}
 })
 
-/*
+
 adminRouter.put("/updateHeroes/", async (req, res) => {
 	try {
 		await heroData.forEach(item => {
-			// Get data 
+			// Get list of heroes 
 			var heroArr = [];
 			for (var a = 0; a < heroData.length; a++){
 				if (heroData[a].name === item.name){
@@ -69,28 +69,31 @@ adminRouter.put("/updateHeroes/", async (req, res) => {
 				}
 			}
 
-			// Update documents
-			Hero.findOneAndUpdate(
-				{name: item.name},
-				heroArr[0],
-				{new: true},
-				(err, item) => {
-					if (err) return res.status(500).send(err);
-				
-					const response = {
-						message: item.name + " successfully updated",
-						id: item._id
-					};
-						
-					return res.status(200).send(response);
-				});
+			// Update each listed hero
+			for (let item in heroArr){
+				// Update documents
+				Hero.findOneAndUpdate(
+					{name: item.name},
+					heroArr[0],
+					{new: true},
+					(err, item) => {
+						if (err) return res.status(500).send(err);
+					
+						const response = {
+							message: item.name + " successfully updated",
+							id: item._id
+						};
+							
+						return res.status(200).send(response);
+					});
+				}
 		})
 	} catch {
 		res.status(404)
 		res.send({ error: "Put request error!" })
 	}
 })
-*/
+
 
 adminRouter.post("/addHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
