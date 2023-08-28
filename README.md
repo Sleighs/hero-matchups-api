@@ -35,3 +35,6 @@ All requests are GET requests and go over https. All responses return json data.
 * Duo matchup information 
 * Best counter search feature 
 * Lineup analyzer
+
+## Updates 
+For hero counters updates see updates.md
