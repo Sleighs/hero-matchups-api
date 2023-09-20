@@ -1,13 +1,55 @@
-const express = require("express")
-const { heroData } = require("../heroData")
-const Hero = require("../models/Hero")
-const adminRouter = express.Router()
+const express = require("express");
+const { heroData } = require("../heroData");
+const Hero = require("../models/Hero");
+const adminRouter = express.Router();
 
 function capitalizeFirstLetter([ first='', ...rest ]) {
 	return [ first.toUpperCase(), ...rest ].join('');
 }
 
-// Routes for updating documents
+
+
+adminRouter.get("/", async (req, res) => {
+	try {
+		res.send({
+			base: apiUrl,
+			allHeroes: apiUrl + '/heroes',
+			singleHero: apiUrl + '/heroes/:heroName',
+			heroesOfType: apiUrl + '/type/:type',
+			allArchetypes: apiUrl + '/archetype',
+			archetypeByName: apiUrl + '/archetype/:archetypeName',
+			randomHero: apiUrl + '/random',
+			randomHeroByType: apiUrl + '/random/:type',
+			lastUpdated: 'December 18, 2022',
+			currentPort: process.env.PORT || 0,
+		});
+	} catch {
+		res.status(404)
+		res.send({ error: "Request error retrieving route information!" })
+	}
+});
+
+
+
+// Routes for updating
+
+adminRouter.put("/updateAll/", async (req, res) => {
+	heroData.forEach(item => {
+		console.log("heroData item >> ", item)
+		// update each hero using the name
+		Hero.findOneAndUpdate(
+			{name: item.name},
+			{$set: item},
+			{new: true},
+			(err, item) => {
+				console.log("error item >> ", item)
+				console.log("error err  >> ", err)
+			}
+		)
+		return res.status(200).send({message: "All heroes updated!"})
+	})
+});
+
 adminRouter.put("/updateHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
 	
@@ -55,43 +97,10 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 		res.status(404)
 		res.send({ error: "Put request error!" })
 	}
-})
+});
+
 
 /*
-adminRouter.put("/updateHeroes/", async (req, res) => {
-	try {
-		await heroData.forEach(item => {
-			// Get data 
-			var heroArr = [];
-			for (var a = 0; a < heroData.length; a++){
-				if (heroData[a].name === item.name){
-					heroArr.push(heroData[a])
-				}
-			}
-
-			// Update documents
-			Hero.findOneAndUpdate(
-				{name: item.name},
-				heroArr[0],
-				{new: true},
-				(err, item) => {
-					if (err) return res.status(500).send(err);
-				
-					const response = {
-						message: item.name + " successfully updated",
-						id: item._id
-					};
-						
-					return res.status(200).send(response);
-				});
-		})
-	} catch {
-		res.status(404)
-		res.send({ error: "Put request error!" })
-	}
-})
-
-
 adminRouter.post("/addHero/:heroName", async (req, res) => {
 	let name = capitalizeFirstLetter(req.params.heroName)
 	
