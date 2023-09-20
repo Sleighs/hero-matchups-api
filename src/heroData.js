@@ -329,6 +329,7 @@ var heroData = [
       Pharah: "++",
       Roadhog: "-",
       Symmetra: "+",
+      Tracer: "+",
       Widowmaker: "-",
       Winston: "-"
     },
@@ -565,7 +566,7 @@ var heroData = [
       Echo: "+",
       Hanzo: "-",
       Junkrat: "-",
-      Kiriko: "+",
+      Kiriko: "-",
       Lucio: "+",
       Reaper: "-",
       Reinhardt: "+",
@@ -632,6 +633,7 @@ var heroData = [
     counters: {
       Bastion: "+",
       Brigitte: "-",
+      Cassidy: "-",
       Hanzo: "+",
       Junkrat: "-",
       Kiriko: "+",
@@ -760,7 +762,7 @@ var heroData = [
       Ana: "+",
       Junkrat: "+",
       Ramattra: "+",
-      Sombra: "-",
+      Sombra: "+",
       Tracer: "-",
       Widowmaker: "-"
     },
