@@ -34,20 +34,27 @@ adminRouter.get("/", async (req, res) => {
 // Routes for updating
 
 adminRouter.put("/updateAll/", async (req, res) => {
-	heroData.forEach(item => {
-		console.log("heroData item >> ", item)
-		// update each hero using the name
-		Hero.findOneAndUpdate(
-			{name: item.name},
-			{$set: item},
-			{new: true},
-			(err, item) => {
-				console.log("error item >> ", item)
-				console.log("error err  >> ", err)
-			}
-		)
-		return res.status(200).send({message: "All heroes updated!"})
-	})
+  try {
+    heroData.forEach(async (item) => {
+      console.log("heroData item >> ", item)
+      // update each hero using the name
+      await Hero.findOneAndUpdate(
+        {name: item.name},
+        {$set: item},
+        {new: true},
+        (err, item) => {
+          console.log("error item >> ", item)
+          console.log("error err  >> ", err)
+        }
+      )
+    });
+    return res.status(200).send({message: "All heroes updated!"})
+  } catch {
+    res.status(404)
+    res.send({ error: "updateAll request error!" })
+  }
+
+  
 });
 
 adminRouter.put("/updateHero/:heroName", async (req, res) => {
@@ -78,12 +85,10 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 
 	try {
 		// Update document in database
-		Hero.findOneAndUpdate(
-			{name: name},
-			heroArr[0],
-			{new: true},
-			(err, item) => {
-				if (err) return res.status(500).send(err);
+    await Hero.findOneAndUpdate({name: name}, heroArr[0], {new: true})
+
+			// (err, item) => {
+			// 	if (err) return res.status(500).send(err);
 			
 				const response = {
 					message: "Item successfully updated",
@@ -92,7 +97,7 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 				};
 					
 				return res.status(200).send(response);
-			});
+			// });
 	} catch {
 		res.status(404)
 		res.send({ error: "Put request error!" })
@@ -125,7 +130,7 @@ adminRouter.post("/addHero/:heroName", async (req, res) => {
 
 adminRouter.delete("/delete/:heroName", async (req, res) => {
 	try {
-		Hero.remove({name: req.params.heroName}, function(err){
+		await Hero.remove({name: req.params.heroName}, function(err){
 			if (err) {
 				res.send(err);
 			} else{

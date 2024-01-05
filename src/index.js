@@ -27,7 +27,7 @@ app.use(morgan('dev'));
 
 // Add routes
 app.use("/", router)
-app.use("/admin", adminRouter)
+//app.use("/admin", adminRouter)
 
 // Connect to MongoDB database
 const connectionParams = {
