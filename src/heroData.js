@@ -1,7 +1,7 @@
 // Curated hero data. Updates come here first.
 // Game: Overwatch 2, version 3.39, Oct 25 2022
 
-var heroData = [
+const heroData = [
   {
     name: "D.Va",
     type: "tank",
@@ -72,6 +72,21 @@ var heroData = [
     skill: 0,
     health: 425,
     armor: 0,
+    shields: 0,
+  },
+  {
+    name: "Mauga",
+    type: "tank",
+    counters: {
+      Ana: "-",
+      Roadhog: "+",
+      Orisa: "-",
+    },
+    archetype: ["Damage Heavy"],
+    difficulty: 2,
+    skill: 2,
+    health: 250,
+    armor: 250,
     shields: 0,
   },
   {
@@ -695,6 +710,7 @@ var heroData = [
       JunkerQueen: "-",
       Kiriko: "-",
       Lucio: "+",
+      Mauga: "+",
       Moira: "+",
       Pharah: "+",
       Reaper: "+",
