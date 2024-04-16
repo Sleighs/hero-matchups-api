@@ -1,5 +1,9 @@
-// Curated hero data. Updates come here first.
-// Game: Overwatch 2, version 3.39, Oct 25 2022
+// Upcoming Changes
+// Game: Overwatch 2
+// Season: 9
+
+// New updates can be found here ahead of release on the API. Asterisks(*) mark updates that arent finalized. 
+
 
 const heroData = [
   {
