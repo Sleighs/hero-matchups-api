@@ -69,6 +69,7 @@ const heroData = [
       Reaper: "-",
       Mei: "--",
       Orisa: "-",
+      WreckingBall: "++", // new
       Zenyatta: "-"
     },
     archetype: ["Damage Heavy"],
@@ -83,7 +84,7 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "-",
-      Roadhog: "+",
+      Roadhog: "++", // new
       Sigma: "-",
     },
     archetype: ["Damage Heavy"],
@@ -106,7 +107,7 @@ const heroData = [
       Moira: "-",
       Ramattra: "+",
       Reaper: "-",
-      Sigma: "-",
+      Sigma: "-", 
       Torbjorn: "+",
       Widowmaker: "-",
       Zarya: "-",
@@ -159,7 +160,8 @@ const heroData = [
       Sigma: "+",
       Soldier76: "+",
       Sombra: "-",
-      Widowmaker: "+"
+      Widowmaker: "+", 
+      Zenyatta: "-", // new
     },
     archetype: ["Anchor"],
     difficulty: 1,
@@ -183,12 +185,12 @@ const heroData = [
       Ramattra: "+",
       Reaper: "--",
       Sigma: "-",
-      Soldier76: "+",
+      //Soldier76: "+",
       Sombra: "+",
       Widowmaker: "-",
-      Winston: "++",
+      Winston: "+", // new
       WreckingBall: "+",
-      Zarya: "-"
+      Zarya: "-", // new
     },
     archetype: ["Damage Heavy"],
     difficulty: 1,
@@ -225,11 +227,12 @@ const heroData = [
       Dva: "++",
       Genji: "++",
       Hanzo: "++",
-      Cassidy: "+",
+      Cassidy: "-", // new
       Reaper: "--",
-      Roadhog: "--",
+      Roadhog: "-", // new
       Symmetra: "+",
       Widowmaker: "++",
+      Zarya: "+", // new
       Zenyatta: "++"
     },
     archetype: ["Initiator"],
@@ -245,8 +248,10 @@ const heroData = [
     counters: {
       Ana: "-",
       Brigitte: "--",
+      //Mauga: "-", // new
       Mei: "-",
       Moira: "+",
+      JunkerQueen: "--", // new
       Reaper: "-",
       Roadhog: "-",
       Sombra: "--",
@@ -274,6 +279,7 @@ const heroData = [
       Reaper: "-",
       Roadhog: "+",
       Torbjorn: "++",
+      Winston: "-", // new
       Zenyatta: "-"
     },
     archetype: ["First Responder"],
@@ -355,7 +361,7 @@ const heroData = [
       Symmetra: "+",
       Tracer: "+",
       Widowmaker: "-",
-      Winston: "-"
+      Winston: "+",
     },
     archetype: ["Anchor"],
     difficulty: 2,
@@ -865,6 +871,7 @@ const heroData = [
       JunkerQueen: "+",
       Orisa: "+",
       Ramattra: "+",
+      Reinhardt: "+", // new
       Sombra: "-",
       Tracer: "--",
       Zarya: "+"
