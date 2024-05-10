@@ -49,8 +49,9 @@ const heroData = [
       Ashe: "-",
       Dva: "+",
       //Genji: "-",
+      Mauga: "-",
       Mei: "-", // new
-      Orisa: "-",
+      Orisa: "--", // new
       Pharah: "--",
       Soldier76: "-",
       Sombra: "--"
@@ -86,6 +87,7 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "-",
+      Doomfist: "+", // new
       Roadhog: "++", 
       Orisa: "-", // new
       Sigma: "-",
@@ -102,7 +104,7 @@ const heroData = [
     type: "tank",
     counters: {
       Ashe: "+",
-      Doomfist: "+",
+      Doomfist: "++",
       //Genji: "-",
       Hanzo: "-",
       JunkerQueen: "+",
@@ -477,8 +479,8 @@ const heroData = [
     type: "damage",
     counters: {
       Ashe: "-",
-      Doomfist: "+",
       Dva: "+",
+      Doomfist: "+",
       JunkerQueen: "++",
       Lucio: "-",
       Cassidy: "+",

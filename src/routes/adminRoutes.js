@@ -54,7 +54,6 @@ adminRouter.put("/updateAll/", async (req, res) => {
     res.send({ error: "updateAll request error!" })
   }
 
-  
 });
 
 adminRouter.put("/updateHero/:heroName", async (req, res) => {
