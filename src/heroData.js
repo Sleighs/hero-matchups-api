@@ -48,7 +48,8 @@ const heroData = [
     counters: {
       Ashe: "-",
       Dva: "+",
-      Genji: "-",
+      //Genji: "-",
+      Mei: "-", // new
       Orisa: "-",
       Pharah: "--",
       Soldier76: "-",
@@ -85,7 +86,8 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "-",
-      Roadhog: "++", // new
+      Roadhog: "++", 
+      Orisa: "-", // new
       Sigma: "-",
     },
     archetype: ["Damage Heavy"],
@@ -101,10 +103,11 @@ const heroData = [
     counters: {
       Ashe: "+",
       Doomfist: "+",
-      Genji: "-",
+      //Genji: "-",
       Hanzo: "-",
       JunkerQueen: "+",
       Junkrat: "-",
+      Mauga: "+", // new
       Moira: "-",
       Ramattra: "+",
       Reaper: "-",
@@ -361,6 +364,7 @@ const heroData = [
       Roadhog: "-",
       Symmetra: "+",
       Tracer: "+",
+      Venture: "+", // new
       Widowmaker: "-",
       Winston: "+",
     },
@@ -401,10 +405,10 @@ const heroData = [
       Baptiste: "+",
       Bastion: "+",
       Brigitte: "-",
-      Doomfist: "+",
+      //Doomfist: "+",
       Hanzo: "++",
       Mercy: "++",
-      Orisa: "+",
+      //Orisa: "+",
       Pharah: "-",
       Soldier76: "+",
       Widowmaker: "++",
@@ -473,6 +477,7 @@ const heroData = [
     type: "damage",
     counters: {
       Ashe: "-",
+      Doomfist: "+",
       Dva: "+",
       JunkerQueen: "++",
       Lucio: "-",
@@ -512,6 +517,7 @@ const heroData = [
       Symmetra: "++",
       Torbjorn: "+",
       Tracer: "+",
+      Venture: "++", // new
       Widowmaker: "--",
       Zarya: "++"
     },
@@ -670,6 +676,7 @@ const heroData = [
       Kiriko: "+",
       Pharah: "-",
       Torbjorn: "-",
+      Venture: "--", // new
       Zenyatta: "++"
     },
     archetype: ["Flanker", "Scrapper"],
@@ -683,10 +690,9 @@ const heroData = [
     name: "Venture",
     type: "damage",
     counters: {
-      Tracer: "++*",
-      Cassidy: "-*",
-      Pharah: "--*",
-      Sombra: "-*",
+      Tracer: "++", // new
+      Cassidy: "-", // new
+      Pharah: "--", // new
     },
     archetype: ["Specialist"],
     difficulty: 0,
