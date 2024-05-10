@@ -2,4 +2,8 @@
 
 docs
 
-node_modules
+node_modules/
+
+updates.md
+updates.md
+node_modules/.package-lock.json
