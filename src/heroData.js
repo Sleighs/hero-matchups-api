@@ -24,6 +24,7 @@ const heroData = [
       Pharah: "+",
       Reaper: "+",
       Sombra: "-",
+      Symmetra: "-", // new
       Widowmaker: "++",
       Zarya: "--"
     }, 
@@ -620,6 +621,7 @@ const heroData = [
     type: "damage",
     counters: {
       Cassidy: "-",
+      Dva: "+", // new
       Pharah: "--",
       Sombra: "-",
       Winston: "--",
