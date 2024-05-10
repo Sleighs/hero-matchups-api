@@ -413,6 +413,7 @@ const heroData = [
       //Orisa: "+",
       Pharah: "-",
       Soldier76: "+",
+      Tracer: "+", // new
       Widowmaker: "++",
       Winston: "--",
       Zarya: "--",
@@ -655,7 +656,7 @@ const heroData = [
       Orisa: "-",
       Pharah: "-",
       Soldier: "-",
-      Tracer: "+",
+      Tracer: "++",
       Widowmaker: "--",
       Zarya: "--"
     },
@@ -673,11 +674,12 @@ const heroData = [
       Bastion: "+",
       Brigitte: "-",
       Cassidy: "-",
+      Genji: "-", // new
       Hanzo: "+",
       Junkrat: "-",
       Kiriko: "+",
       Pharah: "-",
-      Torbjorn: "-",
+      Torbjorn: "--",
       Venture: "--", // new
       Zenyatta: "++"
     },
