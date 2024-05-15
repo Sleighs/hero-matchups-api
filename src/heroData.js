@@ -139,7 +139,7 @@ const heroData = [
       //Pharah: "+",
       //Echo: "+",
       //WidowMaker: "-",
-      //Winston: "+",
+      Winston: "+",
       //Tracer: "+",
       Zenyatta: "-",
     },
@@ -234,6 +234,7 @@ const heroData = [
       Genji: "++",
       Hanzo: "++",
       Cassidy: "-", // new
+      Ramattra: "-",
       Reaper: "--",
       Roadhog: "-", // new
       Symmetra: "+",
@@ -686,7 +687,7 @@ const heroData = [
     archetype: ["Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2,
-    health: 150,
+    health: 175,
     armor: 0,
     shields: 0,
   },
@@ -697,6 +698,7 @@ const heroData = [
       Tracer: "++", // new
       Cassidy: "-", // new
       Pharah: "--", // new
+      Zenyatta: "+*", // new
     },
     archetype: ["Specialist"],
     difficulty: 0,
@@ -766,7 +768,7 @@ const heroData = [
     archetype: ["Main Healer", "Utility"],
     difficulty: 3,
     skill: 3,
-    health: 200,
+    health: 250,
     armor: 0,
     shields: 0,
   },
@@ -786,7 +788,7 @@ const heroData = [
     archetype: ["Main Healer", "Utility"],
     difficulty: 3,
     skill: 3,
-    health: 200,
+    health: 250,
     armor: 0,
     shields: 0,
   },
@@ -900,6 +902,7 @@ const heroData = [
       Reinhardt: "+", // new
       Sombra: "-",
       Tracer: "--",
+      Venture: "-*", // new
       Zarya: "+"
     },
     archetype: ["Pocket Healer", "Utility"],
