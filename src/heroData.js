@@ -24,7 +24,7 @@ const heroData = [
       Pharah: "+",
       Reaper: "+",
       Sombra: "-",
-      Symmetra: "-", // new
+      Symmetra: "-",
       Widowmaker: "++",
       Zarya: "--"
     }, 
@@ -50,9 +50,11 @@ const heroData = [
       Dva: "+",
       //Genji: "-",
       Mauga: "-",
-      Mei: "-", // new
-      Orisa: "--", // new
+      Mei: "-", 
+      Orisa: "--",
       Pharah: "--",
+      Reaper: "-",
+      Roadhog: "-",
       Soldier76: "-",
       Sombra: "--"
     },
@@ -87,9 +89,10 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "-",
-      Doomfist: "+", // new
+      Doomfist: "+", 
+      Mei: "-",
       Roadhog: "++", 
-      Orisa: "-", // new
+      Orisa: "-", 
       Sigma: "-",
     },
     archetype: ["Damage Heavy"],
@@ -167,7 +170,7 @@ const heroData = [
       Soldier76: "+",
       Sombra: "-",
       Widowmaker: "+", 
-      Zenyatta: "-", // new
+      Zenyatta: "-",
     },
     archetype: ["Anchor"],
     difficulty: 1,
@@ -183,6 +186,7 @@ const heroData = [
       Ana: "--",
       Baptiste: "+",
       Bastion: "+",
+      Doomfist: "+",
       Lucio: "+",
       Cassidy: "+",
       Mauga: "-",
@@ -191,12 +195,11 @@ const heroData = [
       Ramattra: "+",
       Reaper: "--",
       Sigma: "-",
-      //Soldier76: "+",
       Sombra: "+",
       Widowmaker: "-",
-      Winston: "+", // new
+      Winston: "+",
       WreckingBall: "+",
-      Zarya: "-", // new
+      Zarya: "-",
     },
     archetype: ["Damage Heavy"],
     difficulty: 1,
@@ -332,6 +335,7 @@ const heroData = [
     type: "damage",
     counters: {
       Ana: "-",
+      Brigitte: "+",
       Dva: "-",
       Echo: "+",
       Genji: "-",
@@ -342,6 +346,7 @@ const heroData = [
       Reinhardt: "++",
       Roadhog: "-",
       Soldier76: "-",
+      Sombra: "-",
       Tracer: "-",
       Widowmaker: "-",
       Winston: "++",
@@ -391,6 +396,7 @@ const heroData = [
       Soldier76: "-",
       Sombra: "-",
       Torbjorn: "+",
+      Veture: "++",
       Widowmaker: "-"
     },
     archetype: ["Flanker", "Scrapper"],
@@ -485,6 +491,7 @@ const heroData = [
       Doomfist: "+",
       JunkerQueen: "++",
       Lucio: "-",
+      Mauga: "+",
       Cassidy: "+",
       Pharah: "-",
       Reinhardt: "++",
@@ -537,6 +544,7 @@ const heroData = [
     type: "damage",
     counters: {
       Ana: "-",
+      Doomfist: "+",
       Dva: "-",
       Echo: "-",
       Junkrat: "-",
@@ -601,6 +609,7 @@ const heroData = [
     type: "damage",
     counters: {
       Ana: "+",
+      Bastion: "+",
       Brigitte: "+",
       Dva: "+",
       Doomfist: "++",
@@ -658,6 +667,7 @@ const heroData = [
       Pharah: "-",
       Soldier: "-",
       Tracer: "++",
+      Venture: "+",  
       Widowmaker: "--",
       Zarya: "--"
     },
@@ -695,10 +705,16 @@ const heroData = [
     name: "Venture",
     type: "damage",
     counters: {
-      Tracer: "++", // new
-      Cassidy: "-", // new
-      Pharah: "--", // new
-      Zenyatta: "+*", // new
+      Brigitte: "+",  
+      Echo: "--", // new
+      Genji: "+", // new
+      Tracer: "++", 
+      Cassidy: "-", 
+      Pharah: "--", 
+      Sigma: "-*", // new
+      Torbjorn: "-", // new
+      Widowmaker: "-*", // new
+      Zenyatta: "+", 
     },
     archetype: ["Specialist"],
     difficulty: 0,
@@ -797,6 +813,7 @@ const heroData = [
     type: "support",
     counters: {
       Ashe: "-",
+      Bastion: "-", 
       Dva: "+",
       Genji: "+",
       Junkrat: "-",
@@ -805,6 +822,7 @@ const heroData = [
       Reinhardt: "+",
       Sombra: "-",
       Tracer: "+",
+      Venture: "-",
       WreckingBall: "++"
     },
     archetype: ["Pocket Healer", "Utility"],
@@ -899,7 +917,7 @@ const heroData = [
       JunkerQueen: "+",
       Orisa: "+",
       Ramattra: "+",
-      Reinhardt: "+", // new
+      Reinhardt: "+", 
       Sombra: "-",
       Tracer: "--",
       Venture: "-*", // new
