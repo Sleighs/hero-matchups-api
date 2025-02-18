@@ -86,10 +86,10 @@ const heroData = [
       Sombra: "-",
       // Tracer: "+",
       //Widomaker:"-",
-      WreckingBall: "+",
+      // WreckingBall: "+",
       Zenyatta: "-*",
     }, 
-    archetype: ["Damage Heavy"],
+    archetype: ["Initiator", "Scrapper"],
     difficulty: 0,
     skill: 0,
     health: 425,
@@ -125,6 +125,7 @@ const heroData = [
       Roadhog: "++", 
       Orisa: "-", 
       Sigma: "-",
+      WreckingBall: "+",
     },
     archetype: ["Damage Heavy"],
     difficulty: 2,
@@ -288,14 +289,16 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "-",
-      Brigitte: "--",
-      //Mauga: "-", // new
+      Brigitte: "-",
+      Lucio: "-", // new
+      Mauga: "-", // new
       Mei: "-",
       Moira: "+",
-      JunkerQueen: "--", // new
+      JunkerQueen: "--",
       Reaper: "-",
       Roadhog: "-",
       Sombra: "--",
+      Torbjorn: "-",
       Widowmaker: "+"
     },
     archetype: ["Initiator"],
@@ -701,6 +704,7 @@ const heroData = [
       Tracer: "++",
       Venture: "+",  
       Widowmaker: "--",
+      WreckingBall: "+",
       Zarya: "--"
     },
     archetype: ["Anchor", "Scrapper", "Specialist"],
@@ -859,7 +863,7 @@ const heroData = [
       Sombra: "-",
       Tracer: "+",
       Venture: "-",
-      WreckingBall: "++"
+      WreckingBall: "+"
     },
     archetype: ["Pocket Healer", "Utility"],
     difficulty: 1,
@@ -958,7 +962,8 @@ const heroData = [
       Pharah: "--",
       Sigma: "+",
       Sombra: "-",
-      Torbjorn: "-"
+      Torbjorn: "-",
+      WreckingBall: "+"
     },
     archetype: ["Utility"],
     difficulty: 2,
