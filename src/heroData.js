@@ -649,6 +649,7 @@ const heroData = [
       Doomfist: "++",
       Echo: "+",
       Hanzo: "-",
+      Hazard: "+",
       Junkrat: "-",
       Ilari: "+",
       Kiriko: "-",
