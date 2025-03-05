@@ -19,6 +19,7 @@ const heroData = [
       Junkrat: "-",
       Ilari: "+",
       Cassidy: "+",
+      Mauga: "+",
       Mei: "-",
       Mercy: "++",
       Moira: "+",
@@ -120,6 +121,7 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "-",
+      Dva: "-",
       Doomfist: "+", 
       Mei: "-",
       Roadhog: "++", 
