@@ -443,6 +443,32 @@ const heroData = [
     shields: 0,
   },
   {
+    name: "Freja",
+    type: "damage",
+    counters: {
+      Ana: "-",
+      Ashe: "+*",
+      Dva: "-",
+      Genji: "-",
+      Orisa: "+*",
+      Sigma: "-*",
+      Sombra: "-",
+      Symmetra: "+",
+      Torbjorn: "++",
+      // Tracer: "+*",
+      Widowmaker: "-",
+      Winston: "-",
+      WreckingBall: "+*",
+      Zenyatta: "++"
+    },
+    archetype: ["Sniper", "Specialist"],
+    difficulty: 3,
+    skill: 0,
+    health: 225,
+    armor: 0,
+    shields: 0,
+  },
+  {
     name: "Genji",
     type: "damage",
     counters: {
