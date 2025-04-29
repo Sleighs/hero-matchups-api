@@ -15,6 +15,8 @@ const heroData = [
       Bastion: "+",
       Brigitte: "-",
       Doomfist: "-",
+      Freja: "+",
+      // Genji: "+",
       Hanzo: "++",
       Junkrat: "-",
       Ilari: "+",
@@ -143,6 +145,7 @@ const heroData = [
       Ashe: "+",
       Doomfist: "++",
       //Genji: "-",
+      Freja: "-*",
       Hanzo: "-",
       JunkerQueen: "+",
       Junkrat: "-",
@@ -247,6 +250,7 @@ const heroData = [
     type: "tank",
     counters: {
       Ana: "+",
+      Freja: "+",
       Lucio: "-",
       Mauga: "+",
       Orisa: "-",
@@ -268,15 +272,16 @@ const heroData = [
     counters: {
       Bastion: "-",
       Dva: "++",
+      Freja: "+",
       Genji: "++",
       Hanzo: "++",
-      Cassidy: "-", // new
+      Cassidy: "-", 
       Ramattra: "-",
       Reaper: "--",
-      Roadhog: "-", // new
+      Roadhog: "-", 
       Symmetra: "+",
       Widowmaker: "++",
-      Zarya: "+", // new
+      Zarya: "+", 
       Zenyatta: "++"
     },
     archetype: ["Initiator"],
@@ -292,8 +297,9 @@ const heroData = [
     counters: {
       Ana: "-",
       Brigitte: "-",
-      Lucio: "-", // new
-      Mauga: "-", // new
+      // Freja: "-*",
+      Lucio: "-", 
+      Mauga: "-", 
       Mei: "-",
       Moira: "+",
       JunkerQueen: "--",
@@ -344,6 +350,7 @@ const heroData = [
       Dva: "+",
       Doomfist: "+",
       Echo: "+",
+      Freja: "-*",
       Hanzo: "-",
       Junkrat: "+",
       Mei: "+",
@@ -455,10 +462,10 @@ const heroData = [
       Sombra: "-",
       Symmetra: "+",
       Torbjorn: "++",
-      // Tracer: "+*",
+      // Tracer: "-*",
       Widowmaker: "-",
       Winston: "-",
-      WreckingBall: "+*",
+      // WreckingBall: "+*",
       Zenyatta: "++"
     },
     archetype: ["Sniper", "Specialist"],
@@ -476,6 +483,7 @@ const heroData = [
       Baptiste: "+",
       Bastion: "+",
       Brigitte: "-",
+      Freja: "+",
       Hanzo: "++",
       Mercy: "++",
       Pharah: "-",
@@ -676,6 +684,7 @@ const heroData = [
       Dva: "+",
       Doomfist: "++",
       Echo: "+",
+      Freja: "+",
       Hanzo: "-",
       Hazard: "+",
       Junkrat: "-",
@@ -703,7 +712,8 @@ const heroData = [
     type: "damage",
     counters: {
       Cassidy: "-",
-      Dva: "+", // new
+      Dva: "+",
+      Freja: "-", 
       Pharah: "--",
       Sombra: "-",
       Winston: "--",
@@ -723,6 +733,7 @@ const heroData = [
     counters: {
       Ana: "-",
       Echo: "-",
+      Freja: "--",
       Genji: "+",
       Hanzo: "--",
       Junkrat: "-",
@@ -750,6 +761,7 @@ const heroData = [
       Bastion: "+",
       Brigitte: "-",
       Cassidy: "-",
+      // Freja: "+*"
       Genji: "-", // new
       Hanzo: "+",
       Junkrat: "-",
@@ -800,6 +812,7 @@ const heroData = [
       Bastion: "+",
       Dva: "--",
       Echo: "+",
+      Freja: "+",
       Genji: "--",
       Hanzo: "-",
       Junkrat: "++",
@@ -833,6 +846,7 @@ const heroData = [
       Bastion: "+",
       Dva: "-",
       Echo: "+",
+      Freja: "+",
       Genji: "+",
       JunkerQueen: "-",
       Ilari: "+",
@@ -1043,6 +1057,7 @@ const heroData = [
     type: "support",
     counters: {
       Ana: "-",
+      Freja: "--",
       Genji: "-",
       JunkerQueen: "+",
       Orisa: "+",
