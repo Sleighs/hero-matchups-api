@@ -4,10 +4,92 @@
 
 // New updates can be found here ahead of release on the API. Asterisks(*) mark updates that arent finalized. 
 
+/*
+# D.va
+Real Name:
+Hana Song (송하나)
+Birth:
+June 22nd
+Age:
+21 (Overwatch 2)
+19 (Overwatch)
+Nationality:
+South Korea Korean
+Occupation:
+Professional gamer (formerly)
+Mech pilot
+Actress
+Base:
+MEKA Base, Busan, South Korea (formerly)
+'Watchpoint: Gibraltar'
+Affiliation:
+Mobile Exo-Force of the Korean Army (MEKA) (South Korean Army)
+Overwatch
+Voice:
+Charlet Chung[1] (English)
+
+Role: Tank Tank
+Health:
+225 (Open queue)
+375 (Role queue)
+175 (Pilot Form, tank passive is ignored)
+350 (6v6)
+
+Armor:
+325
+0 (Pilot Form)
+300 (6v6)
+
+
+# Mauga
+
+Quote "A gun in each hand and a smile on my face!"
+
+Real Name
+Maugaloa Malosi[1]
+Status
+Active
+Birth
+August 19th[1]
+Age
+37[1]
+Nationality
+Samoa Samoan
+Occupation
+Mercenary
+Heavy Assault
+Base
+Apia, Samoa[1]
+Affiliation
+Deepsea Raiders (formerly)
+Talon
+Relations
+Malosi (father)
+Voice
+John Tui (English)
+
+Cosmetics
+Cosmetic page
+Quotes
+Quotation page
+Role
+Tank Tank
+Health
+425 (Open queue)
+575 (Role queue)
+450 (6v6)
+Armor
+150
+100 (6v6)
+
+
+*/
+
 
 const heroData = [
   {
     name: "D.Va",
+    realName: "Hana Song (송하나)",
     type: "tank",
     counters: {
       Ana: "+",
@@ -32,27 +114,30 @@ const heroData = [
       Widowmaker: "++",
       Zarya: "--"
     }, 
-    /*characteristics: {
-      durability: '',
-      initiative: '',
-      utility: '',
-      damage: ''
-    },*/
     archetype: ["First Responder"],
     difficulty: 2,
     skill: 2,
-    health: 350,
-    health2: 150,
-    armor: 300,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 225, roleQueue: 375, pilotForm: 175, sixVSix: 350 },
+    armor: { openQueue: 325, roleQueue: 325, pilotForm: 0, sixVSix: 300 },
+    shields: { openQueue: 0, roleQueue: 0, pilotForm: 0, sixVSix: 0 },
+    birth: "June 22",
+    age: 21,
+    ages: { Overwatch: 19, "Overwatch 2": 21 },
+    nationality: "Korean",
+    occupation: ["Professional gamer (formerly)", "Mech pilot", "Actress"],
+    base: [ "MEKA Base, Busan, South Korea (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Mobile Exo-Force of the Korean Army (MEKA)", "South Korean Army", "Overwatch"],
+    voice: "Charlet Chung (English)",
+    quotes: ["Time to save the world? Game on!"]
   },
   {
     name: "Doomfist",
+    realName: "Akande Ogundimu",
     type: "tank",
     counters: {
       Ashe: "-",
       Dva: "+",
-      //Genji: "-",
       Mauga: "-",
       Mei: "-", 
       Orisa: "--",
@@ -65,12 +150,25 @@ const heroData = [
     archetype: ["Initiator"],
     difficulty: 3,
     skill: 3,
-    health: 450,
-    armor: 0,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 375, roleQueue: 525, sixVSix: 425 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Alive",
+    birth: "May 25",
+    age: 47,
+    ages: { Overwatch: 45, "Overwatch 2": 47 },
+    nationality: "Nigerian",
+    occupation: ["Martial artist (formerly)", "Mercenary", "CEO", "Talon council member"],
+    base: [ "Oyo, Nigeria (formerly)", "Rome, Italy"],
+    affiliation: ["Ogundimu Synergies Inc. (formerly)", "Talon"],
+    relations: ["Akinjide Adeyemi (mentor)"],
+    voice: "Sahr Ngaujah (English)",
+    quotes: ["Our future will be forged in conflict."]
   },
   {
     name: "Hazard",
+    realName: "Findlay Docherty",
     type: "tank",
     counters: {
       Ana: "-",
@@ -93,14 +191,26 @@ const heroData = [
       Zenyatta: "-*",
     }, 
     archetype: ["Initiator", "Scrapper"],
-    difficulty: 0,
-    skill: 0,
-    health: 425,
-    armor: 225,
-    shields: 0,
+    difficulty: null,
+    skill: null,
+    role: "Tank",
+    health: { openQueue: 275, roleQueue: 425 },
+    armor: { openQueue: 225, roleQueue: 225 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "November 11",
+    age: 24,
+    ages: { "Overwatch 2": 24 },
+    nationality: "Scottish",
+    occupation: ["Soldier (formerly)", "Punk rocker"],
+    base: [ "Glasgow, Scotland (formerly)", "Unknown"],
+    affiliation: ["British military (formerly)", "Phreaks"],
+    relations: ["Susannah (partner)"],
+    voice: "Conor McLeod (English)",
   },
   {
     name: "Junker Queen",
+    realName: "Odessa \"Dez\" Stone",
     type: "tank",
     counters: {
       Ana: "+",
@@ -112,14 +222,27 @@ const heroData = [
       Zenyatta: "-"
     },
     archetype: ["Damage Heavy"],
-    difficulty: 0,
-    skill: 0,
-    health: 425,
-    armor: 0,
-    shields: 0,
+    difficulty: null,
+    skill: null,
+    role: "Tank",
+    health: { openQueue: 375, roleQueue: 525, sixVSix: 425 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "June 14",
+    age: 31,
+    ages: { "Overwatch 2": 31 },
+    nationality: "Australian",
+    occupation: ["Gladiator champion (formerly)", "Ruler of Junkertown"],
+    base: [ "Junkertown, Australia"],
+    affiliation: ["Wastelanders (temporarily)", "Junkers"],
+    relations: ["Stone (father)", "unnamed mother", "5 siblings"],
+    voice: "Leah de Niese (English)",
+    quotes: ["My throne is where I say it is."]
   },
   {
     name: "Mauga",
+    realName: "Maugaloa Malosi",
     type: "tank",
     counters: {
       Ana: "-",
@@ -132,11 +255,23 @@ const heroData = [
       WreckingBall: "+",
     },
     archetype: ["Damage Heavy"],
-    difficulty: 2,
-    skill: 2,
-    health: 250,
-    armor: 250,
-    shields: 0,
+    difficulty: null,
+    skill: null,
+    role: "Tank",
+    health: { openQueue: 425, roleQueue: 575, sixVSix: 450 },
+    armor: { openQueue: 150, roleQueue: 150, sixVSix: 100 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "August 19",
+    age: 37,
+    ages: { "Overwatch 2": 37 },
+    nationality: "Samoan",
+    occupation: ["Mercenary"],
+    base: [ "Apia, Samoa"],
+    affiliation: ["Deepsea Raiders (formerly)", "Talon"],
+    relations: ["Malosi (father)"],
+    voice: "John Tui (English)",
+    quotes: ["A gun in each hand and a smile on my face!"]
   },
   {
     name: "Orisa",
@@ -1051,6 +1186,28 @@ const heroData = [
     health: 200,
     armor: 0,
     shields: 0,
+  },
+  {
+    name: "Wuyang",
+    realName: "Wuyang Ye (叶无漾)",
+    type: "support",
+    counters: {
+
+    },
+    archetype: ["Pocket Healer"],
+    difficulty: 0,
+    skill: 0,
+    health: 250,
+    shields: 0,
+
+    status: "active",
+    birth: "May first",
+    age: 19,
+    occupation: "First-year student",
+    base: 'Water College (Wuxing U), Chengdu, Sichuan, China',
+    affiliation: 'Wuxing University Overwatch',
+    relations: ['Unnamed parents', 'Anran Ye (older sister)'],
+    voice: ['Howard Wang (English)']
   },
   {
     name: "Zenyatta",
