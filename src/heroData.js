@@ -41,46 +41,44 @@ Armor:
 300 (6v6)
 
 
-# Mauga
-
-Quote "A gun in each hand and a smile on my face!"
-
-Real Name
-Maugaloa Malosi[1]
+# Orisa
+"Only in unity will we find strength."
 Status
 Active
 Birth
-August 19th[1]
+May 9th
 Age
-37[1]
+1
 Nationality
-Samoa Samoan
+Numbani Numbanian
 Occupation
-Mercenary
-Heavy Assault
+Guardian robot
 Base
-Apia, Samoa[1]
+Numbani (formerly)
+Watchpoint: Gibraltar
 Affiliation
-Deepsea Raiders (formerly)
-Talon
+Numbani
+Overwatch
 Relations
-Malosi (father)
+ Efi Oladele (creator)
 Voice
-John Tui (English)
+Cherrelle Skeete[1] (English)
 
 Cosmetics
 Cosmetic page
 Quotes
 Quotation page
+Stadium
+Stadium page
 Role
 Tank Tank
 Health
-425 (Open queue)
-575 (Role queue)
-450 (6v6)
+150 (Open queue)
+300 (Role queue)
+250 (6v6)
 Armor
-150
-100 (6v6)
+300
+250 (6v6)
 
 
 */
@@ -297,10 +295,22 @@ const heroData = [
     archetype: ["Anchor"],
     difficulty: 2,
     skill: 2,
-    health: 275,
-    armor: 275,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 150, roleQueue: 300, sixVSix: 250 },
+    armor: { openQueue: 300, roleQueue: 300, sixVSix: 250 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "May 9",
+    age: 1,
+    nationality: "Numbanian",
+    occupation: ["Guardian robot"],
+    base: [ "Numbani (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Numbani", "Overwatch"],
+    relations: ["Efi Oladele (creator)"],
+    voice: "Cherrelle Skeete (English)",
+    quotes: ["Only in unity will we find strength."]
   },
+
   {
     name: "Ramattra",
     type: "tank",
@@ -321,12 +331,25 @@ const heroData = [
     archetype: ["Anchor"],
     difficulty: 3,
     skill: 3,
-    health: 450,
-    armor: 0,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 250, roleQueue: 400, sixVSix: 350 },
+    armor: { openQueue: 100, roleQueue: 100, sixVSix: 100 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "March 29",
+    age: 28,
+    ages: { "Overwatch 2": 28 },
+    nationality: "Omnic",
+    occupation: ["Military leader (formerly)", "Shambali monk (formerly)", "Leader of Null Sector", "Inventor"],
+    base: ["Shambali Monastery, Nepal (formerly)"],
+    affiliation: ["Shambali (formerly)", "Null Sector"],
+    relations: ["Anubis (creator)"],
+    voice: "Ramon Tikaram (English)",
+    quotes: ["We will have peace at any cost."]
   },
   {
     name: "Reinhardt",
+    realName: "Reinhardt Wilhelm",
     type: "tank",
     counters: {
       Ashe: "+",
@@ -347,12 +370,25 @@ const heroData = [
     archetype: ["Anchor"],
     difficulty: 1,
     skill: 1,
-    health: 325,
-    armor: 300,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 250, roleQueue: 400, sixVSix: 325 },
+    armor: { openQueue: 300, roleQueue: 300, sixVSix: 225 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "June 26",
+    age: 63,
+    ages: { Overwatch: 61, "Overwatch 2": 63 },
+    nationality: "German",
+    occupation: ["Crusader (formerly)", "Overwatch agent (formerly)", "Adventurer"],
+    base: ["Stuttgart, Germany (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["German Armed Forces (formerly)", "Crusaders (formerly)", "Overwatch"],
+    relations: ["Balderich von Adler (mentor)", "Brigitte Lindholm (squire)"],
+    voice: "Darin De Paul (English)",
+    quotes: ["Together we will strike them down!"]
   },
   {
     name: "Roadhog",
+    realName: "Mako Rutledge",
     type: "tank",
     counters: {
       Ana: "--",
@@ -376,12 +412,25 @@ const heroData = [
     archetype: ["Damage Heavy"],
     difficulty: 1,
     skill: 1,
-    health: 700,
-    armor: 0,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 600, roleQueue: 750, sixVSix: 650 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "September 12",
+    age: 50,
+    ages: { Overwatch: 48, "Overwatch 2": 50 },
+    nationality: "Australian",
+    occupation: ["Enforcer (formerly)", "Bodyguard"],
+    base: ["Junkertown, Australia (formerly)"],
+    affiliation: ["Australian Liberation Front (formerly)", "Junkers (formerly)", "Wreckers (formerly)"],
+    relations: ["Junkrat (partner)"],
+    voice: "Josh Petersdorf (English)",
+    quotes: ["Apocalypse ain't over."]
   },
   {
     name: "Sigma",
+    realName: "Siebren de Kuiper",
     type: "tank",
     counters: {
       Ana: "+",
@@ -397,12 +446,25 @@ const heroData = [
     archetype: ["Anchor"],
     difficulty: 3,
     skill: 3,
-    health: 350,
-    armor: 0,
-    shields: 200,
+    role: "Tank",
+    health: { openQueue: 200, roleQueue: 350, sixVSix: 200 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 275, roleQueue: 275, sixVSix: 250 },
+    status: "Active",
+    birth: "March 15",
+    age: 64,
+    ages: { "Overwatch 2": 64 },
+    nationality: "Dutch",
+    occupation: ["Scientist (formerly)", "Talon living weapon"],
+    base: ["The Hague, Netherlands (formerly)", "International Space Station (formerly)"],
+    affiliation: ["Talon"],
+    voice: "Boris Hiestand (English)",
+    quotes: ["Why seek answers when we do not know the question?"]
   },
   {
     name: "Winston",
+    realName: "Winston",
+    aliases: ["S. Peaceape"],
     type: "tank",
     counters: {
       Bastion: "-",
@@ -422,12 +484,25 @@ const heroData = [
     archetype: ["Initiator"],
     difficulty: 2,
     skill: 2,
-    health: 350,
-    armor: 200,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 350, roleQueue: 350, sixVSix: 350 },
+    armor: { openQueue: 200, roleQueue: 200, sixVSix: 200 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "June 6",
+    age: 31,
+    ages: { "Overwatch 2": 31 },
+    nationality: "Lunar",
+    occupation: ["Test subject (formerly)", "Scientist", "Adventurer"],
+    base: ["Horizon Lunar Colony (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Lucheng Interstellar (formerly)", "Overwatch"],
+    relations: ["Harold Winston (creator)"],
+    voice: "Crispin Freeman (English)",
+    quotes: ["A better world is possible today!"]
   },
   {
     name: "Wrecking Ball",
+    realName: "Hammond",
     type: "tank",
     counters: {
       Ana: "-",
@@ -447,9 +522,21 @@ const heroData = [
     archetype: ["Initiator"],
     difficulty: 3,
     skill: 3,
-    health: 550,
-    armor: 150,
-    shields: 0,
+    role: "Tank",
+    health: { openQueue: 550, roleQueue: 550, sixVSix: 550 },
+    armor: { openQueue: 150, roleQueue: 150, sixVSix: 150 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "Unknown",
+    age: 14,
+    ages: { "Overwatch 2": 14 },
+    nationality: "Lunar",
+    occupation: ["Gladiator champion (formerly)", "Mechanic"],
+    base: ["Horizon Lunar Colony (formerly)", "Junkertown, Australia"],
+    affiliation: ["Junkers"],
+    relations: ["Winston (friend)"],
+    voice: "Dee Bradley Baker (English)",
+    quotes: ["Time to raise my APM."]
   },
   {
     name: "Zarya",
