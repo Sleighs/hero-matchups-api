@@ -8,27 +8,36 @@
 # D.va
 Real Name:
 Hana Song (송하나)
+Aliases: []
+Status: null
 Birth:
 June 22nd
+
 Age:
 21 (Overwatch 2)
 19 (Overwatch)
+
 Nationality:
 South Korea Korean
+
 Occupation:
 Professional gamer (formerly)
 Mech pilot
 Actress
+
 Base:
 MEKA Base, Busan, South Korea (formerly)
 'Watchpoint: Gibraltar'
+
 Affiliation:
 Mobile Exo-Force of the Korean Army (MEKA) (South Korean Army)
 Overwatch
-Voice:
-Charlet Chung[1] (English)
 
-Role: Tank Tank
+Voice:
+Charlet Chung (English)
+
+Role: Tank
+
 Health:
 225 (Open queue)
 375 (Role queue)
@@ -40,45 +49,6 @@ Armor:
 0 (Pilot Form)
 300 (6v6)
 
-
-# Orisa
-"Only in unity will we find strength."
-Status
-Active
-Birth
-May 9th
-Age
-1
-Nationality
-Numbani Numbanian
-Occupation
-Guardian robot
-Base
-Numbani (formerly)
-Watchpoint: Gibraltar
-Affiliation
-Numbani
-Overwatch
-Relations
- Efi Oladele (creator)
-Voice
-Cherrelle Skeete[1] (English)
-
-Cosmetics
-Cosmetic page
-Quotes
-Quotation page
-Stadium
-Stadium page
-Role
-Tank Tank
-Health
-150 (Open queue)
-300 (Role queue)
-250 (6v6)
-Armor
-300
-250 (6v6)
 
 
 */
@@ -485,19 +455,19 @@ const heroData = [
     difficulty: 2,
     skill: 2,
     role: "Tank",
-    health: { openQueue: 350, roleQueue: 350, sixVSix: 350 },
+    health: { openQueue: 275, roleQueue: 425, sixVSix: 350 },
     armor: { openQueue: 200, roleQueue: 200, sixVSix: 200 },
     shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
-    status: "Active",
+    status: null,
     birth: "June 6",
     age: 31,
     ages: { "Overwatch 2": 31 },
-    nationality: "Lunar",
+    nationality: null,
     occupation: ["Test subject (formerly)", "Scientist", "Adventurer"],
     base: ["Horizon Lunar Colony (formerly)", "Watchpoint: Gibraltar"],
     affiliation: ["Lucheng Interstellar (formerly)", "Overwatch"],
-    relations: ["Harold Winston (creator)"],
-    voice: "Crispin Freeman (English)",
+    relations: null,
+    voice: ["Crispin Freeman (English)", "Dee Bradley Baker (English)"],
     quotes: ["A better world is possible today!"]
   },
   {
@@ -523,23 +493,25 @@ const heroData = [
     difficulty: 3,
     skill: 3,
     role: "Tank",
-    health: { openQueue: 550, roleQueue: 550, sixVSix: 550 },
-    armor: { openQueue: 150, roleQueue: 150, sixVSix: 150 },
-    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    health: { openQueue: 300, roleQueue: 450, sixVSix: 500 },
+    armor: { openQueue: 175, roleQueue: 175, sixVSix: 100 },
+    shields: { openQueue: 150, roleQueue: 150, sixVSix: 0 },
     status: "Active",
-    birth: "Unknown",
-    age: 14,
-    ages: { "Overwatch 2": 14 },
+    birth: "October 15",
+    age: 16,
+    ages: { "Overwatch 2": 16 },
     nationality: "Lunar",
-    occupation: ["Gladiator champion (formerly)", "Mechanic"],
-    base: ["Horizon Lunar Colony (formerly)", "Junkertown, Australia"],
-    affiliation: ["Junkers"],
-    relations: ["Winston (friend)"],
-    voice: "Dee Bradley Baker (English)",
-    quotes: ["Time to raise my APM."]
+    occupation: ["Test subject (formerly)", "Mech pilot", "Mechanic", "Bodyguard"],
+    base: ["Horizon Lunar Colony (formerly)", "Junkertown"],
+    affiliation: ["Lucheng Interstellar (formerly)", "Junkers"],
+    relations: ["Unnamed mother", "Numerous siblings"],
+    voice: ["Dee Bradley Baker", "Jonathan Lipow (English)"],
+    quotes: ["Weapons operational. Grapples primed. Hamster pumped."]
   },
   {
     name: "Zarya",
+    realName: "Aleksandra Zaryanova (Александра Зарянова)",
+    aliases: ["Sasha"],
     type: "tank",
     counters: {
       Bastion: "-",
@@ -559,12 +531,25 @@ const heroData = [
     archetype: ["First Responder"],
     difficulty: 3,
     skill: 3,
-    health: 250,
-    armor: 0,
-    shields: 225,
+    role: "Tank",
+    health: { openQueue: 175, roleQueue: 325, sixVSix: 225 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
+    status: "Active",
+    birth: "December 4",
+    age: 30,
+    ages: { Overwatch: 28, "Overwatch 2": 30 },
+    nationality: "Russian",
+    occupation: ["Soldier"],
+    base: ["Krasnoyarsk Front, Russia (formerly)", "Novanskoye Forward Base, Siberia, Russia (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Russian Defense Forces", "Volskaya Industries (temporarily)", "Overwatch"],
+    relations: ["Unnamed father", "Ira Zaryanova (sister)", "Marisha Zaryanova (sister)", "Extended family, including two other siblings or cousins"],
+    voice: "Dolya Gavanski (English)",
+    quotes: ["We will crush them!"]
   },
   {
     name: "Ashe",
+    realName: "Elizabeth Caledonia \"Calamity\" Ashe",
     type: "damage",
     counters: {
       Ana: "-",
@@ -591,12 +576,25 @@ const heroData = [
     archetype: ["Anchor", "Sniper"],
     difficulty: 2,
     skill: 2,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "October 1",
+    age: 41,
+    ages: { Overwatch: 39, "Overwatch 2": 41 },
+    nationality: "American",
+    occupation: ["Thief", "Gang leader"],
+    base: ["Deadlock Gorge, Arizona, USA"],
+    affiliation: ["Arbalest Arms Company (formerly)", "Deadlock Gang"],
+    relations: ["Caledonia Ashe (great-great-great grandmother)", "Mr. Ashe (father)", "Mrs. Ashe (mother)"],
+    voice: "Jennifer Hale (English)",
+    quotes: ["I'm the last one you'll ever cross."]
   },
   {
     name: "Bastion",
+    realName: "Bastion",
     type: "damage",
     counters: {
       Ana: "-",
@@ -620,12 +618,25 @@ const heroData = [
     archetype: ["Anchor", "Specialist"],
     difficulty: 1,
     skill: 1,
-    health: 200,
-    armor: 100,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 100, roleQueue: 100, sixVSix: 100 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "Unknown",
+    age: 32,
+    ages: { Overwatch: 30, "Overwatch 2": 32 },
+    nationality: "Omnic",
+    occupation: ["Battle automaton (formerly)", "Workshop assistant"],
+    base: ["Gothenburg, Sweden"],
+    affiliation: ["Ironclad Guild"],
+    voice: "Chris Metzen (English)",
+    quotes: ["(thoughtful beeps)"]
   },
   {
     name: "Cassidy",
+    realName: "Cole Cassidy",
+    aliases: ["Jesse McCree", "Cass"],
     type: "damage",
     counters: {
       Dva: "-",
@@ -644,12 +655,24 @@ const heroData = [
     archetype: ["Anchor"],
     difficulty: 2,
     skill: 2,
-    health: 225,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "July 31",
+    age: 39,
+    ages: { Overwatch: 37, "Overwatch 2": 39 },
+    nationality: "American",
+    occupation: ["Factory worker (formerly)", "Farmhand (formerly)", "Criminal (formerly)", "Overwatch agent", "Bounty hunter", "Mercenary"],
+    base: ["Santa Fe, New Mexico, USA (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Various employers, including the Ace Valentine megafarm (formerly)", "Deadlock Gang (formerly)", "Overwatch", "Blackwatch (formerly)"],
+    voice: "Matthew Mercer (English)",
+    quotes: ["Someone needs to fill this saddle."]
   },
   {
     name: "Echo",
+    realName: "Echo",
     type: "damage",
     counters: {
       Ana: "-",
@@ -667,12 +690,26 @@ const heroData = [
     archetype: ["Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 150, roleQueue: 150, sixVSix: 150 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 75, roleQueue: 75, sixVSix: 75 },
+    status: "Active",
+    birth: "February 5",
+    age: 14,
+    ages: { "Overwatch 2": 14 },
+    nationality: "Omnic",
+    occupation: ["Multirole adaptive robot"],
+    base: ["Switzerland (formerly)", "United States (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Overwatch"],
+    relations: ["Mina Liao (creator)"],
+    voice: "Jeannie Bolet (English)",
+    quotes: ["I am always ready to learn!"]
   },
   {
     name: "Freja",
+    realName: "Freja Skov",
+    aliases: ["Gefn"],
     type: "damage",
     counters: {
       Ana: "-",
@@ -693,12 +730,25 @@ const heroData = [
     archetype: ["Sniper", "Specialist"],
     difficulty: 3,
     skill: 0,
-    health: 225,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "September 6",
+    age: 34,
+    ages: { "Overwatch 2": 34 },
+    nationality: "Danish",
+    occupation: ["Search and rescue specialist (formerly)", "Bounty hunter"],
+    base: ["Copenhagen, Denmark (formerly)", "Unknown"],
+    affiliation: ["Danish Armed Forces (formerly)", "Overwatch Search and Rescue (formerly)"],
+    voice: "Olivia Le Andersen (English)",
+    quotes: ["I always deliver."]
   },
   {
     name: "Genji",
+    realName: "Genji Shimada (島田 源氏)",
+    aliases: ["Sparrow"],
     type: "damage",
     counters: {
       Ana: "-",
@@ -720,12 +770,25 @@ const heroData = [
     archetype: ["Flanker", "Scrapper"],
     difficulty: 3,
     skill: 3,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "October 28",
+    age: 37,
+    ages: { Overwatch: 35, "Overwatch 2": 37 },
+    nationality: "Japanese",
+    occupation: ["Adventurer", "Samurai"],
+    base: ["Hanamura, Japan (formerly)", "Shambali Monastery, Nepal (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Shimada Clan (formerly)", "Blackwatch (formerly)", "Overwatch (left, later rejoined)", "Shambali (temporarily)"],
+    relations: ["Hanzo Shimada (older brother)", "Sojiro Shimada (father)", "Rumiko Shimada (mother)"],
+    voice: "Gaku Space (English)",
+    quotes: ["Peace returns to those that wish for it."]
   },
   {
     name: "Hanzo",
+    realName: "Hanzo Shimada (島田 半蔵)",
     type: "damage",
     counters: {
       Ashe: "+",
@@ -742,12 +805,26 @@ const heroData = [
     archetype: ["Anchor", "Sniper"],
     difficulty: 3,
     skill: 3,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "November 3",
+    age: 40,
+    ages: { Overwatch: 38, "Overwatch 2": 40 },
+    nationality: "Japanese",
+    occupation: ["Assassin", "Mercenary (temporary)"],
+    base: ["Hanamura, Japan (formerly)", "Kanazaka, Japan"],
+    affiliation: ["Shimada Clan (formerly)"],
+    relations: ["Sojiro Shimada (father)", "Rumiko Shimada (mother)", "Genji Shimada (younger brother)"],
+    voice: "Paul Nakauchi (English)",
+    quotes: ["Honor is all I have left."]
   },
   {
     name: "Junkrat",
+    realName: "Jamison Fawkes",
+    aliases: [],
     type: "damage",
     counters: {
       Ashe: "-",
@@ -769,12 +846,26 @@ const heroData = [
     archetype: ["Anchor", "Flanker", "Scrapper"],
     difficulty: 2,
     skill: 2,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "February 29",
+    age: 27,
+    ages: { "Overwatch 2": 27 },
+    nationality: "Australian",
+    occupation: ["Anarchist", "Thief", "Demolitionist", "Mercenary", "Scavenger"],
+    base: ["Junkertown, Australia (formerly)"],
+    affiliation: ["Junkers (formerly)"],
+    relations: [],
+    voice: "Chris Parson (English)",
+    quotes: ["Plenty of bombs to go around!"]
   },
   {
     name: "Mei",
+    realName: "Mei-Ling Zhou (周美灵)",
+    aliases: [],
     type: "damage",
     counters: {
       Ashe: "-",
@@ -794,12 +885,25 @@ const heroData = [
     archetype: ["Scrapper", "Specialist"],
     difficulty: 3,
     skill: 3,
-    health: 250,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 300, roleQueue: 300, sixVSix: 300 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "September 5",
+    age: 33,
+    ages: { biological: 33, chronological: 42 },
+    nationality: "Chinese",
+    occupation: ["Climatologist", "Adventurer"],
+    base: ["Xi'an, China (formerly)"],
+    affiliation: ["Overwatch", "Atlas News"],
+    voice: "Elise Zhang (English and Chinese Mandarin)",
+    quotes: ["Come on, Snowball! They need our help!"]
   },
   {
     name: "Pharah",
+    realName: "Fareeha Amari (فريحة عماري)",
+    aliases: ["Fareeha English (original name)"],
     type: "damage",
     counters: {
       Ana: "-",
@@ -827,12 +931,26 @@ const heroData = [
     archetype: ["Anchor", "Flanker", "Specialist"],
     difficulty: 1,
     skill: 1,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "April 15",
+    age: 34,
+    ages: { Overwatch: 32, "Overwatch 2": 34 },
+    nationality: "Canadian/Egyptian",
+    occupation: ["Security chief"],
+    base: ["Cairo, Egypt (formerly)", "Giza, Egypt (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Egyptian Army (formerly)", "Helix Security International (formerly)", "Overwatch"],
+    relations: ["Ana Amari (mother)", "Sam English (father)"],
+    voice: "Jen Cohn (English)",
+    quotes: ["Strike from above."]
   },
   {
     name: "Reaper",
+    realName: "Gabriel Reyes",
+    aliases: ["Smokey (nickname)"],
     type: "damage",
     counters: {
       Ana: "-",
@@ -853,12 +971,25 @@ const heroData = [
     archetype: ["Flanker", "Scrapper"],
     difficulty: 1,
     skill: 1,
-    health: 250,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 300, roleQueue: 300, sixVSix: 300 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "December 14",
+    age: 60,
+    ages: { Overwatch: 58, "Overwatch 2": 60 },
+    nationality: "American",
+    occupation: ["Police officer (formerly)", "Soldier (formerly)", "Strike commander (formerly)", "Blackwatch commander (formerly)", "Talon Field agent/council member"],
+    base: ["Los Angeles, United States (formerly)", "Rome, Italy"],
+    affiliation: ["Los Angeles Police Department (formerly)", "United States Army (formerly)", "Soldier Enhancement Program (formerly)", "Overwatch (formerly)", "Blackwatch (formerly)", "Talon"],
+    relations: ["Martina Reyes (wife)", "Unnamed son"],
+    voice: "Keith Ferguson (English)",
+    quotes: ["You can't escape death."]
   },
   {
     name: "Sojourn",
+    realName: "Vivian Chase",
     type: "damage",
     counters: {
       Echo: "+",
@@ -870,12 +1001,25 @@ const heroData = [
     archetype: ["Anchor", "Flanker", "Sniper"],
     difficulty: 0,
     skill: 0,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "January 12",
+    age: 51,
+    ages: { "Overwatch 2": 51 },
+    nationality: "Canadian",
+    occupation: ["Infantrywoman (formerly)", "Special Forces operative (formerly)", "Overwatch captain (formerly)", "Acting commander (formerly)"],
+    base: ["Toronto, Canada"],
+    affiliation: ["Primary Reserve (formerly)", "Canadian Army (formerly)", "Canadian Special Operations Regiment (formerly)", "Overwatch"],
+    relations: ["Unnamed grandmother", "Unnamed grandfather", "Unnamed father", "Unnamed mother", "Valentine Chase-Chapman (twin sister)", "Bonnie Chase-Chapman (niece)"],
+    voice: "Cherise Boothe (English)",
+    quotes: ["We're in this together. All of us."]
   },
   {
     name: "Soldier: 76",
+    realName: "John Francis \"Jack\" Morrison",
     type: "damage",
     counters: {
       Baptiste: "+",
@@ -892,12 +1036,25 @@ const heroData = [
     archetype: ["Anchor"],
     difficulty: 1,
     skill: 1,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "January 27",
+    age: 58,
+    ages: { Overwatch: 56, "Overwatch 2": 58 },
+    nationality: "American",
+    occupation: ["Soldier (formerly)", "Overwatch commander (formerly)", "Vigilante"],
+    base: ["Bloomington, Indiana, United States (birth place) (formerly)", "Overwatch HQ (formerly)", "Unknown"],
+    affiliation: ["United States Army (formerly)", "Soldier Enhancement Program (formerly)", "Overwatch (formerly)"],
+    relations: ["Various family members, including a great-aunt, grandfather, uncle, father, and mother", "Vincent (former friend)"],
+    voice: "Fred Tatasciore (English)",
+    quotes: ["Every soldier needs a cause."]
   },
   {
     name: "Sombra",
+    realName: "Olivia Colomar",
     type: "damage",
     counters: {
       Ana: "+",
@@ -925,12 +1082,24 @@ const heroData = [
     archetype: ["Flanker", "Specialist"],
     difficulty: 3,
     skill: 3,
-    health: 200,
-    armor: 0,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Alive",
+    birth: "December 31",
+    age: 32,
+    ages: { Overwatch: 30, "Overwatch 2": 32 },
+    nationality: "Mexican",
+    occupation: ["Hacker"],
+    base: ["Dorado, Mexico"],
+    affiliation: ["Los Muertos (formerly)", "Talon (currently)"],
+    voice: "Carolina Ravassa (English)",
+    quotes: ["In my world, there are no secrets."]
   },
   {
     name: "Symmetra",
+    realName: "Satya Vaswani (सत्य वासवानी)",
     type: "damage",
     counters: {
       Cassidy: "-",
@@ -944,13 +1113,24 @@ const heroData = [
     archetype: ["Specialist"],
     difficulty: 2,
     skill: 2,
-    health: 100,
-    armor: 0,
-    shields: 125,
+    role: "Damage",
+    health: { openQueue: 125, roleQueue: 125, sixVSix: 125 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 125, roleQueue: 125, sixVSix: 125 },
+    status: null,
+    birth: "October 2",
+    age: 30,
+    ages: { Overwatch: 28, "Overwatch 2": 30 },
+    nationality: "Indian",
+    occupation: ["Architech"],
+    base: ["Utopaea, India"],
+    affiliation: ["Vishkar Corporation"],
+    voice: "Anjali Bhimani (English)",
+    quotes: ["From imperfection, we build a new world."]
   },
   {
-    name: "Torbjorn",
-    //name: "Torbjörn",
+    name: "Torbjorn", //"Torbjörn",
+    realName: "Torbjörn Lindholm",
     type: "damage",
     counters: {
       Ana: "-",
@@ -972,9 +1152,29 @@ const heroData = [
     archetype: ["Anchor", "Scrapper", "Specialist"],
     difficulty: 2,
     skill: 2,
-    health: 200,
-    armor: 50,
-    shields: 0,
+    role: "Damage",
+    health: { openQueue: 225  , roleQueue: 225, sixVSix: 225 },
+    armor: { openQueue: 75, roleQueue: 75, sixVSix: 75 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: null,
+    birth: "September 21",
+    age: 59,
+    ages: { Overwatch: 57, "Overwatch 2": 59 },
+    nationality: "Swedish",
+    occupation: ["Weapons designer", "Chief engineer (formerly)"],
+    base: ["Gothenburg, Sweden"],
+    affiliation: ["Overwatch (formerly)", "Lindholm Workshop"],
+    relations: [
+      "Ingrid Lindholm (wife)",
+      "Brigitte Lindholm (daughter)",
+      "8 other daughters (unnamed)",
+      "1 son (unnamed)",
+      "Reinhardt Wilhelm (close friend)",
+      "Angela Ziegler (colleague)",
+      "Bastion (close friend)"
+    ],
+    voice: "Keith Silverstein (English)",
+    quotes: ["Tools in hand, brain in gear."]
   },
   {
     name: "Tracer",
@@ -1279,7 +1479,10 @@ const heroData = [
     realName: "Wuyang Ye (叶无漾)",
     type: "support",
     counters: {
-
+      Ana: "-*",
+      Genji: "-*",
+      Sombra: "-*",
+      Widowmaker: "-*",
     },
     archetype: ["Pocket Healer"],
     difficulty: 0,
