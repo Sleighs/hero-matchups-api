@@ -9,6 +9,17 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 
 
 
+// Log write attempts and payloads to help debug PUT/POST/DELETE errors
+adminRouter.use((req, res, next) => {
+	if (req.method === 'PUT' || req.method === 'POST' || req.method === 'DELETE') {
+		try {
+			console.warn(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl} — body: ${JSON.stringify(req.body || {})}`)
+		} catch (logErr) {
+			console.warn(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl} — body: [unserializable]`)
+		}
+	}
+	next()
+})
 adminRouter.get("/", async (req, res) => {
 	try {
 		res.send({
@@ -23,7 +34,8 @@ adminRouter.get("/", async (req, res) => {
 			lastUpdated: 'December 18, 2022',
 			currentPort: process.env.PORT || 0,
 		});
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /admin — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving route information!" })
 	}
@@ -35,22 +47,31 @@ adminRouter.get("/", async (req, res) => {
 
 adminRouter.put("/updateAll/", async (req, res) => {
   try {
-    heroData.forEach(async (item) => {
+    // Use Promise.all to wait for all updates to complete
+    const updatePromises = heroData.map(async (item) => {
       console.log("heroData item >> ", item)
       // update each hero using the name
-      await Hero.findOneAndUpdate(
-        {name: item.name},
-        {$set: item},
-        {new: true},
-        (err, item) => {
-          console.log("error item >> ", item)
-          console.log("error err  >> ", err)
-        }
-      )
+      try {
+        const result = await Hero.findOneAndUpdate(
+          {name: item.name},
+          {$set: item},
+          {new: true}
+        );
+        console.log("Updated hero >> ", result?.name || item.name)
+        return result;
+      } catch (updateErr) {
+        console.error(`Error updating ${item.name}:`, updateErr)
+        throw updateErr;
+      }
     });
+    
+    // Wait for all updates to complete
+    await Promise.all(updatePromises);
+    
     return res.status(200).send({message: "All heroes updated!"})
-  } catch {
-    res.status(404)
+  } catch (err) {
+    console.error(`[${new Date().toISOString()}] PUT /admin/updateAll — error:`, err)
+    res.status(500)
     res.send({ error: "updateAll request error!" })
   }
 
@@ -97,7 +118,8 @@ adminRouter.put("/updateHero/:heroName", async (req, res) => {
 					
 				return res.status(200).send(response);
 			// });
-	} catch {
+	} catch (error) {
+		console.error(`[${new Date().toISOString()}] PUT /admin/updateHero/:heroName — params: ${JSON.stringify(req.params)} — error:`, error)
 		res.status(404)
 		res.send({ error: "Put request error!" })
 	}
@@ -118,7 +140,8 @@ adminRouter.post("/addHero/:heroName", async (req, res) => {
 	try {
 		await Hero.create(heroArr[0])
     res.status(201).send({message: "Hero added!", heroData: heroArr[0]})
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] POST /admin/addHero/:heroName — params: ${JSON.stringify(req.params)} — error:`, err)
 		res.status(404)
 		res.send({ error: "Post request error!" })
 	}
@@ -137,7 +160,8 @@ adminRouter.delete("/delete/:heroName", async (req, res) => {
 				res.send("deleted", req.params.heroName);
 			}
 		});
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] DELETE /admin/delete/:heroName — params: ${JSON.stringify(req.params)} — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error!" })
 	}

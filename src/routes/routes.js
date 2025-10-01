@@ -10,6 +10,18 @@ function capitalizeFirstLetter([ first='', ...rest ]) {
 	return [ first.toUpperCase(), ...rest ].join('');
 }
 
+// Log write attempts and payloads to help debug PUT/POST errors
+router.use((req, res, next) => {
+	if (req.method === 'PUT' || req.method === 'POST' || req.method === 'DELETE') {
+		try {
+			console.warn(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl} — body: ${JSON.stringify(req.body || {})}`)
+		} catch (logErr) {
+			console.warn(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl} — body: [unserializable]`)
+		}
+	}
+	next()
+})
+
 router.get("/", async (req, res) => {
 	try {
 		res.send({
@@ -23,17 +35,20 @@ router.get("/", async (req, res) => {
 			randomHeroByType: apiUrl + '/random/:type',
 			lastUpdated: 'December 18, 2022',
 		});
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET / — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving route information!" })
 	}
 })
 
+
 router.get("/heroes", async (req, res) => {
 	try {
 		const heroes = await Hero.find();
 		res.send(heroes);
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /heroes — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving heroes!" })
 	}
@@ -67,7 +82,8 @@ router.get("/heroes/:name", async (req, res) => {
 			const heroByName = await Hero.find({ name: name })
 			res.send(heroByName)
 		}
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /heroes/:name — params: ${JSON.stringify(req.params)} — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving hero information!" })
 	}
@@ -78,7 +94,8 @@ router.get("/type/:type", async (req, res) => {
 		// Get all heroes of selected type
 		const heroesByType = await Hero.find({ type: req.params.type });
 		res.send(heroesByType)
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /type/:type — params: ${JSON.stringify(req.params)} — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving type list!" })
 	}
@@ -91,7 +108,8 @@ router.get("/archetype", async (req, res) => {
 			damage: ["Anchor", "Flanker", "Sniper", "Scrapper", "Specialist"],
 			support: ["Main Healer", "Pocket Healer", "Utility"]
 		});
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /archetype — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving archetype list!" })
 	}
@@ -118,7 +136,8 @@ router.get("/archetype/:archetypeName", async (req, res) => {
 			res.send(heroesByArchetype)
 		}
 		
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /archetype/:archetypeName — params: ${JSON.stringify(req.params)} — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error retrieving archetype list!" })
 	}
@@ -129,7 +148,8 @@ router.get("/random", async (req, res) => {
 		const heroes = await Hero.find()
 		var randomNum = Math.floor((Math.random() * heroes.length) + 1)
 		res.send(heroes[randomNum])
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /random — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error!" })
 	}
@@ -140,7 +160,8 @@ router.get("/random/:type", async (req, res) => {
 		const heroesByType = await Hero.find({ type: req.params.type });
 		var randomNum = Math.floor((Math.random() * heroesByType.length) + 1)
 		res.send(heroesByType[randomNum])
-	} catch {
+	} catch (err) {
+		console.error(`[${new Date().toISOString()}] GET /random/:type — params: ${JSON.stringify(req.params)} — error:`, err)
 		res.status(404)
 		res.send({ error: "Request error!" })
 	}
