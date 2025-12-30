@@ -1209,6 +1209,34 @@ const heroData = [
     quotes: ["Cheers, love! It's time to save the world!"]
   },
   {
+    name: "Vendetta",
+    realName: "Marzia Bartalotti",
+    aliases: ["La Lupa Della Ritorsione", "XLV"],
+    type: "damage",
+    counters: {
+      //lucio: "-",
+      //pharah: "-"
+    },
+    archetype: ["Flanker", "Scrapper"],
+    difficulty: 0,
+    skill: 0,
+    role: "Damage",
+    health: { openQueue: 150, roleQueue: 150, sixVSix: 150 },
+    armor: { openQueue: 125, roleQueue: 125, sixVSix: 125 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "February 15",
+    age: 29,
+    ages: { "Overwatch 2": 29 },
+    nationality: "Italian",
+    occupation: ["Gladiator"],
+    base: ["Rome, Italy"],
+    affiliation: ["Talon (nominal, formerly)"],
+    relations: ["Antonio Bartalotti (father)"],
+    voice: "Chiara Preziosi (English and Italian)",
+    quotes: ["I am the empire."]
+  },
+  {
     name: "Venture",
     realName: "Sloan Cameron",
     type: "damage",
