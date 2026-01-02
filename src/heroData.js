@@ -1,54 +1,38 @@
-// Upcoming Changes
+// Hero Data
 // Game: Overwatch 2
-// Season: 9
+// Season: 20
 
 // New updates can be found here ahead of release on the API. Asterisks(*) mark updates that arent finalized. 
 
 /*
+Model Schema Example:
 # D.va
-Real Name:
-Hana Song (송하나)
+Real Name: Hana Song (송하나)
 Aliases: []
 Status: null
-Birth:
-June 22nd
-
-Age:
-21 (Overwatch 2)
-19 (Overwatch)
-
-Nationality:
-South Korea Korean
-
-Occupation:
-Professional gamer (formerly)
-Mech pilot
-Actress
-
-Base:
-MEKA Base, Busan, South Korea (formerly)
-'Watchpoint: Gibraltar'
-
-Affiliation:
-Mobile Exo-Force of the Korean Army (MEKA) (South Korean Army)
-Overwatch
-
-Voice:
-Charlet Chung (English)
-
+Birth: June 22nd
+Age:[
+  21 (Overwatch 2)
+  19 (Overwatch)
+]
+Nationality: South Korea Korean
+Occupation:[
+  Professional gamer (formerly)
+  Mech pilot
+  Actress
+]
+Base: [
+  MEKA Base, Busan, South Korea (formerly)
+  'Watchpoint: Gibraltar'
+]
+Affiliation: [
+  Mobile Exo-Force of the Korean Army (MEKA), (South Korean Army), Overwatch
+]
+Voice: Charlet Chung (English)
 Role: Tank
-
-Health:
-225 (Open queue)
-375 (Role queue)
-175 (Pilot Form, tank passive is ignored)
-350 (6v6)
-
-Armor:
-325
-0 (Pilot Form)
-300 (6v6)
-
+health: { openQueue: 225, roleQueue: 375, pilotForm: 175, sixVSix: 350 },
+armor: { openQueue: 325, roleQueue: 325, pilotForm: 0, sixVSix: 300 },
+shields: { openQueue: 0, roleQueue: 0, pilotForm: 0, sixVSix: 0 },
 
 
 */
@@ -69,7 +53,7 @@ const heroData = [
       // Genji: "+",
       Hanzo: "++",
       Junkrat: "-",
-      Ilari: "+",
+      Illari: "+",
       Cassidy: "+",
       Mauga: "+",
       Mei: "-",
@@ -913,7 +897,7 @@ const heroData = [
       Doomfist: "++",
       Genji: "+",
       Junkrat: "++",
-      Ilari: "-",
+      Illari: "-",
       Lucio: "++",
       Cassidy: "--",
       Mei: "+",
@@ -1067,7 +1051,7 @@ const heroData = [
       Hanzo: "-",
       Hazard: "+",
       Junkrat: "-",
-      Ilari: "+",
+      Illari: "+",
       Kiriko: "-",
       Lucio: "+",
       Reaper: "-",
@@ -1245,7 +1229,7 @@ const heroData = [
       Brigitte: "+",  
       Echo: "--", // new
       Genji: "+", // new
-      Ilari: "+", // new
+      Illari: "+", // new
       Tracer: "++", 
       Cassidy: "-", 
       Pharah: "--", 
@@ -1336,7 +1320,7 @@ const heroData = [
       Freja: "+",
       Genji: "+",
       JunkerQueen: "-",
-      Ilari: "+",
+      Illari: "+",
       Kiriko: "-",
       Lucio: "+",
       Mauga: "+",
