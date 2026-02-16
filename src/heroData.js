@@ -5,8 +5,8 @@
 // New updates can be found here ahead of release on the API. Asterisks(*) mark updates that arent finalized. 
 
 /*
-Model Schema Example:
-# D.va
+# Model Schema Example:
+## D.va
 Real Name: Hana Song (송하나)
 Aliases: []
 Status: null
@@ -30,10 +30,43 @@ Affiliation: [
 ]
 Voice: Charlet Chung (English)
 Role: Tank
+SubRole:  Initiator
 health: { openQueue: 225, roleQueue: 375, pilotForm: 175, sixVSix: 350 },
 armor: { openQueue: 325, roleQueue: 325, pilotForm: 0, sixVSix: 300 },
 shields: { openQueue: 0, roleQueue: 0, pilotForm: 0, sixVSix: 0 },
 
+
+# New Character:
+
+Jetpack Cat
+"Meow meow"
+
+Real name
+Fika ("Fee-Ka")
+
+Status
+Active
+
+Base
+Watchpoint: Gibraltar
+
+Affiliation
+Overwatch
+
+Relations
+Brigitte Lindholm (adoptive owner)
+
+Role
+Support 
+
+Sub-Role
+Tactician 
+
+Health
+225
+
+Voice
+Jennifer Hale
 
 */
 
@@ -70,6 +103,7 @@ const heroData = [
     difficulty: 2,
     skill: 2,
     role: "Tank",
+    subRole: "Initiator",
     health: { openQueue: 225, roleQueue: 375, pilotForm: 175, sixVSix: 350 },
     armor: { openQueue: 325, roleQueue: 325, pilotForm: 0, sixVSix: 300 },
     shields: { openQueue: 0, roleQueue: 0, pilotForm: 0, sixVSix: 0 },
@@ -82,6 +116,33 @@ const heroData = [
     affiliation: ["Mobile Exo-Force of the Korean Army (MEKA)", "South Korean Army", "Overwatch"],
     voice: "Charlet Chung (English)",
     quotes: ["Time to save the world? Game on!"]
+  },
+  {
+    name: "Domina",
+    realName: "Vaira Singhania (वैरा सिंघानिया)",
+    type: "tank",
+    counters: {
+
+    },
+    archetype: ["Anchor"],
+    difficulty: 2,
+    skill: 2,
+    role: "Tank",
+    subRole: "Stalwart",
+    status: "Active",
+    health: { openQueue: 100, roleQueue: 250, sixVSix: 100 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 400, roleQueue: 400, sixVSix: 375 },
+    birth: "August 28",
+    age: 32,
+    ages: { "Overwatch 2": 32 },
+    nationality: "Indian",
+    occupation: ["Vishkar vice president"],
+    base: ["Vishkar Corporation"],
+    affiliation: ["Talon"],
+    relations: ["Vishwakarma Bhatt (grandfather)"],
+    voice: "Taj Atwal (English)",
+    quotes: ["The perfect world is shaped by my hand"]
   },
   {
     name: "Doomfist",
@@ -532,6 +593,31 @@ const heroData = [
     quotes: ["We will crush them!"]
   },
   {
+    name: "Anran",
+    realName: "Anran Ye (叶安燃)",
+    type: "damage",
+    counters: {
+    },
+    archetype: ["Flanker"],
+    difficulty: null,
+    skill: null,
+    role: "Damage",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "August 8",
+    age: 22,
+    ages: { "Overwatch 2": 22 },
+    nationality: "Chinese",
+    occupation: ["Fourth-year student", "Overwatch agent"],
+    base: ["Fire College (Wuxing U), Chengdu, Sichuan, China (formerly)", "Watchpoint: Gibraltar"],
+    affiliation: ["Wuxing University", "Overwatch"],
+    relations: ["Unnamed parents", "Wuyang Wuyang Ye (younger brother)"],
+    voice: "Fareeha Andersen (English)",
+    quotes: ["The fire in my heart will never burn out"]
+  },
+  {
     name: "Ashe",
     realName: "Elizabeth Caledonia \"Calamity\" Ashe",
     type: "damage",
@@ -689,6 +775,32 @@ const heroData = [
     relations: ["Mina Liao (creator)"],
     voice: "Jeannie Bolet (English)",
     quotes: ["I am always ready to learn!"]
+  },
+  {
+    name: "Emre",
+    realName: "Emre Sarioglu",
+    type: "damage",
+    counters: {
+    },
+    archetype: ["Specialist"],
+    difficulty: null,
+    skill: null,
+    role: "Damage",
+    subRole: "Specialist",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "November 8",
+    age: 44,
+    ages: { "Overwatch 2": 44 },
+    nationality: "Turkish",
+    occupation: ["Soldier, private first class (formerly)", "Mercenary"],
+    base: [],
+    affiliation: ["Overwatch (formerly)", "Talon", "The Conspiracy"],
+    relations: ["Zehra Sarioglu (mother)", "Unnamed father"],
+    voice: "Kerem Erdinc (English)",
+    quotes: ["I'll put it all on the line."]
   },
   {
     name: "Freja",
@@ -1455,6 +1567,27 @@ const heroData = [
     voice: "Andre Cisneros (English and Latin American Spanish)",
   },
   {
+    name: "Jetpack Cat",
+    realName: "Fika ('Fee-Ka')",
+    type: "support",
+    counters: {
+    },
+    archetype: ["Utility"],
+    difficulty: null,
+    skill: null,
+    role: "Support",
+    subRole: "Tactician",
+    health: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    base: ["Watchpoint: Gibraltar"],
+    affiliation: ["Overwatch"],
+    relations: ["Brigitte Lindholm (adoptive owner)"],
+    voice: "Jennifer Hale (English)",
+    quotes: ["Meow meow"]
+  },
+  {
     name: "Juno",
     realName: "Juno Teo Minh",
     aliases: [],
@@ -1620,6 +1753,32 @@ const heroData = [
     relations: ["Unnamed parents (deceased)"],
     voice: "Lucie Pohl (English)",
     quotes: ["Don't worry, I'll be right behind you."],
+  },
+  {
+    name: "Mizuki",
+    realName: "Mizuki Kawano",
+    type: "support",
+    counters: {
+    },
+    archetype: ["Survivor"],
+    difficulty: null,
+    skill: null,
+    role: "Support",
+    subRole: "Survivor",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "April 9",
+    age: 22,
+    ages: { "Overwatch 2": 22 },
+    nationality: "Japanese",
+    occupation: [],
+    base: ["Kanezaka"],
+    affiliation: ["Talon", "Hashimoto clan", "Yōkai (group)"],
+    relations: [],
+    voice: "Julian Cihi (English)",
+    quotes: ["I'll decide my own fate."],
   },
   {
     name: "Moira",
