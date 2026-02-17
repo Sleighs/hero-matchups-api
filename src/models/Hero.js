@@ -25,7 +25,8 @@ const schema = mongoose.Schema({
 	voice: {type: mongoose.Schema.Types.Mixed},
 	quotes: {type: Array},
 	status: {type: String},
-	relations: {type: Array}
+	relations: {type: Array},
+  subRole: {type: String}
 }, { collection: 'heroes' })
 
 module.exports = mongoose.model("Hero", schema)
