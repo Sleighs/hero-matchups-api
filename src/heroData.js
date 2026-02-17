@@ -35,39 +35,6 @@ health: { openQueue: 225, roleQueue: 375, pilotForm: 175, sixVSix: 350 },
 armor: { openQueue: 325, roleQueue: 325, pilotForm: 0, sixVSix: 300 },
 shields: { openQueue: 0, roleQueue: 0, pilotForm: 0, sixVSix: 0 },
 
-
-# New Character:
-
-Jetpack Cat
-"Meow meow"
-
-Real name
-Fika ("Fee-Ka")
-
-Status
-Active
-
-Base
-Watchpoint: Gibraltar
-
-Affiliation
-Overwatch
-
-Relations
-Brigitte Lindholm (adoptive owner)
-
-Role
-Support 
-
-Sub-Role
-Tactician 
-
-Health
-225
-
-Voice
-Jennifer Hale
-
 */
 
 
@@ -1568,7 +1535,7 @@ const heroData = [
   },
   {
     name: "Jetpack Cat",
-    realName: "Fika ('Fee-Ka')",
+    realName: "Fika (Fee-Ka)",
     type: "support",
     counters: {
     },
