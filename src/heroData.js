@@ -1116,6 +1116,34 @@ const heroData = [
     quotes: ["Every soldier needs a cause."]
   },
   {
+    name: "Sierra",
+    realName: "Sierra Turner Woods",
+    aliases: [],
+    type: "damage",
+    counters: {
+
+    },
+    archetype: ["Recon"],
+    difficulty: null,
+    skill: null,
+    role: "Damage",
+    subRole: "Recon",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "April 17",
+    age: 25,
+    ages: { "Overwatch 2": 25 },
+    nationality: "American",
+    occupation: ["Head of Security"],
+    base: ["Virginia, United States (birth place, formerly)", "Watchpoint: Grand Mesa, Colorado, United States"],
+    affiliation: ["Helix Security International"],
+    relations: ["James Turner (father)", "Kendra Banks (mother)"],
+    voice: "Khaya Fraites (English)",
+    quotes: ["Always climb, never fall."]
+  },
+  {
     name: "Sombra",
     realName: "Olivia Colomar",
     type: "damage",
