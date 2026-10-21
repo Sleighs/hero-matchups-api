@@ -1167,7 +1167,7 @@ const heroData = [
   {
     name: "Sombra",
     realName: "Olivia Colomar",
-    type: "damage",
+    type: "support",
     counters: {
       Ana: "+",
       Bastion: "+",
@@ -1191,10 +1191,11 @@ const heroData = [
       Zarya: "+",
       Zenyatta: "+"
     },
-    archetype: ["Flanker", "Specialist"],
+    archetype: ["Flanker", "Specialist", "Tactitian"],
     difficulty: 3,
     skill: 3,
-    role: "Damage",
+    role: "Support",
+    subrole: "Tactician",
     health: { openQueue: 225, roleQueue: 225, sixVSix: 225 },
     armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
     shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
