@@ -1,6 +1,6 @@
 // Hero Data
 // Game: Overwatch 2
-// Season: 20
+// Season: 
 
 // New updates can be found here ahead of release on the API. Asterisks(*) mark updates that arent finalized. 
 
