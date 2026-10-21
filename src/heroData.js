@@ -4,6 +4,7 @@
 
 // New updates can be found here ahead of release on the API. Asterisks(*) mark updates that arent finalized. 
 
+
 /*
 # Model Schema Example:
 ## D.va
@@ -110,6 +111,26 @@ const heroData = [
     relations: ["Vishwakarma Bhatt (grandfather)"],
     voice: "Taj Atwal (English)",
     quotes: ["The perfect world is shaped by my hand"]
+  },
+  {
+    name: "Doctrine",
+    realName: "Tamuka Yeukai",
+    type: "support",
+    counters: {},
+    role: "Support",
+    subRole: "Survivor",
+    health: { openQueue: 250, roleQueue: 250, sixVSix: 250 },
+    armor: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    shields: { openQueue: 0, roleQueue: 0, sixVSix: 0 },
+    status: "Active",
+    birth: "October 20",
+    age: 77,
+    ages: { actual: 77, physical: 40 },
+    nationality: "Zimbabwean",
+    occupation: ["Cyberneticist"],
+    relations: ["Unnamed parents", "Tatenda Yeukai (younger brother)", "Doomfist (ally)"],
+    voice: "Tashinga Bepete (English)",
+    quotes: ["Death is not my destiny."]
   },
   {
     name: "Doomfist",
